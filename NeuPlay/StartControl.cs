@@ -15,6 +15,8 @@ namespace NeuPlay
         public StartControl()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
         }
 
         private void button1_Click(object sender, EventArgs e)

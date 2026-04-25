@@ -15,6 +15,8 @@ namespace NeuPlay
         public DashboardControl()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
         }
     }
 }

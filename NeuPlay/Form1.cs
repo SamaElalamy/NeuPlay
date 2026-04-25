@@ -5,6 +5,8 @@ namespace NeuPlay
         public Form1()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
         }
         public void LoadScreen(UserControl newScreen)
         {

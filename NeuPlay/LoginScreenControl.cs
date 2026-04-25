@@ -8,6 +8,8 @@ namespace NeuPlay
         public LoginScreenControl()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
         }
 
         
