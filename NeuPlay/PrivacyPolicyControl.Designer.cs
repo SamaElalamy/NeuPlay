@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrivacyPolicyControl));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             rtb_PolicyText = new RichTextBox();
             chk_Agree = new CheckBox();
-            button_continue = new Button();
+            button_continue = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // rtb_PolicyText
@@ -53,17 +55,25 @@
             chk_Agree.Text = "agree on terms and policy";
             chk_Agree.UseVisualStyleBackColor = true;
             chk_Agree.CheckedChanged += chk_Agree_CheckedChanged;
+            chk_Agree.Click += chk_Agree_CheckedChanged;
             // 
             // button_continue
             // 
-            button_continue.Enabled = false;
-            button_continue.Location = new Point(408, 456);
+            button_continue.BorderRadius = 15;
+            button_continue.CustomizableEdges = customizableEdges1;
+            button_continue.DisabledState.BorderColor = Color.DarkGray;
+            button_continue.DisabledState.CustomBorderColor = Color.DarkGray;
+            button_continue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            button_continue.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            button_continue.Font = new Font("Segoe UI", 9F);
+            button_continue.ForeColor = Color.White;
+            button_continue.Location = new Point(417, 438);
             button_continue.Name = "button_continue";
-            button_continue.Size = new Size(94, 29);
+            button_continue.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            button_continue.Size = new Size(111, 28);
             button_continue.TabIndex = 2;
             button_continue.Text = "continue";
-            button_continue.UseVisualStyleBackColor = true;
-            button_continue.Click += button_continue_Click_1;
+            button_continue.Click += button_Continue_Click;
             // 
             // PrivacyPolicyControl
             // 
@@ -82,6 +92,6 @@
 
         private RichTextBox rtb_PolicyText;
         private CheckBox chk_Agree;
-        private Button button_continue;
+        private Guna.UI2.WinForms.Guna2Button button_continue;
     }
 }

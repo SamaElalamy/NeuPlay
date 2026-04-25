@@ -73,6 +73,8 @@ namespace NeuPlay
         public DashboardControl()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
             lbl_Welcome.Text = "Hello, Hero !";
             lbl_Score.Text = "Score: 0";
             lbl_Level.Text = "Level: 1";

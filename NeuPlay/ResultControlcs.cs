@@ -17,6 +17,8 @@ namespace NeuPlay
             InitializeComponent();
             lbl_FinalResult.Text = resultMessage;
 
+            Theme.ApplyTheme(this);
+
         }
 
         private void btn_GoToLogin_Click_1(object sender, EventArgs e)

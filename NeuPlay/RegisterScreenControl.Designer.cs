@@ -28,53 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_Register = new Button();
-            btn_BackToLogin = new Button();
-            txt_NewUsername = new TextBox();
-            txt_NewPassword = new TextBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             label2 = new Label();
-            txt_ConfirmPassword = new TextBox();
             label3 = new Label();
             label4 = new Label();
             cmb_Age = new ComboBox();
             label5 = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            txt_NewUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            txt_NewPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txt_ConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
-            // 
-            // btn_Register
-            // 
-            btn_Register.Location = new Point(256, 480);
-            btn_Register.Name = "btn_Register";
-            btn_Register.Size = new Size(136, 53);
-            btn_Register.TabIndex = 0;
-            btn_Register.Text = "Register";
-            btn_Register.UseVisualStyleBackColor = true;
-            btn_Register.Click += btn_Register_Click;
-            // 
-            // btn_BackToLogin
-            // 
-            btn_BackToLogin.Location = new Point(584, 480);
-            btn_BackToLogin.Name = "btn_BackToLogin";
-            btn_BackToLogin.Size = new Size(192, 56);
-            btn_BackToLogin.TabIndex = 1;
-            btn_BackToLogin.Text = "I have already an Account";
-            btn_BackToLogin.UseVisualStyleBackColor = true;
-            btn_BackToLogin.Click += btn_BackToLogin_Click;
-            // 
-            // txt_NewUsername
-            // 
-            txt_NewUsername.Location = new Point(216, 72);
-            txt_NewUsername.Name = "txt_NewUsername";
-            txt_NewUsername.Size = new Size(125, 27);
-            txt_NewUsername.TabIndex = 2;
-            // 
-            // txt_NewPassword
-            // 
-            txt_NewPassword.Location = new Point(208, 144);
-            txt_NewPassword.Name = "txt_NewPassword";
-            txt_NewPassword.PasswordChar = '*';
-            txt_NewPassword.Size = new Size(125, 27);
-            txt_NewPassword.TabIndex = 3;
             // 
             // label1
             // 
@@ -93,14 +68,6 @@
             label2.Size = new Size(70, 20);
             label2.TabIndex = 5;
             label2.Text = "Password";
-            // 
-            // txt_ConfirmPassword
-            // 
-            txt_ConfirmPassword.Location = new Point(208, 216);
-            txt_ConfirmPassword.Name = "txt_ConfirmPassword";
-            txt_ConfirmPassword.PasswordChar = '*';
-            txt_ConfirmPassword.Size = new Size(125, 27);
-            txt_ConfirmPassword.TabIndex = 6;
             // 
             // label3
             // 
@@ -140,21 +107,123 @@
             label5.TabIndex = 10;
             label5.Text = "Age";
             // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges11;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(256, 480);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button1.Size = new Size(150, 56);
+            guna2Button1.TabIndex = 11;
+            guna2Button1.Text = "Register";
+            guna2Button1.Click += btn_Register_Click;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.BorderRadius = 15;
+            guna2Button2.CustomizableEdges = customizableEdges13;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.Font = new Font("Segoe UI", 9F);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Location = new Point(581, 480);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Button2.Size = new Size(225, 56);
+            guna2Button2.TabIndex = 12;
+            guna2Button2.Text = "I have already an Account";
+            guna2Button2.Click += btn_BackToLogin_Click;
+            // 
+            // txt_NewUsername
+            // 
+            txt_NewUsername.BorderColor = Color.LightGray;
+            txt_NewUsername.BorderRadius = 15;
+            txt_NewUsername.CustomizableEdges = customizableEdges15;
+            txt_NewUsername.DefaultText = "";
+            txt_NewUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_NewUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_NewUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_NewUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_NewUsername.FocusedState.BorderColor = Color.DodgerBlue;
+            txt_NewUsername.Font = new Font("Segoe UI", 9F);
+            txt_NewUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_NewUsername.Location = new Point(208, 80);
+            txt_NewUsername.Margin = new Padding(3, 4, 3, 4);
+            txt_NewUsername.Name = "txt_NewUsername";
+            txt_NewUsername.PlaceholderText = "";
+            txt_NewUsername.SelectedText = "";
+            txt_NewUsername.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txt_NewUsername.Size = new Size(125, 27);
+            txt_NewUsername.TabIndex = 13;
+            // 
+            // txt_NewPassword
+            // 
+            txt_NewPassword.BorderColor = Color.LightGray;
+            txt_NewPassword.BorderRadius = 15;
+            txt_NewPassword.CustomizableEdges = customizableEdges17;
+            txt_NewPassword.DefaultText = "";
+            txt_NewPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_NewPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_NewPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_NewPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_NewPassword.FocusedState.BorderColor = Color.DodgerBlue;
+            txt_NewPassword.Font = new Font("Segoe UI", 9F);
+            txt_NewPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_NewPassword.Location = new Point(208, 145);
+            txt_NewPassword.Margin = new Padding(3, 4, 3, 4);
+            txt_NewPassword.Name = "txt_NewPassword";
+            txt_NewPassword.PlaceholderText = "";
+            txt_NewPassword.SelectedText = "";
+            txt_NewPassword.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txt_NewPassword.Size = new Size(125, 27);
+            txt_NewPassword.TabIndex = 14;
+            // 
+            // txt_ConfirmPassword
+            // 
+            txt_ConfirmPassword.BorderColor = Color.LightGray;
+            txt_ConfirmPassword.BorderRadius = 15;
+            txt_ConfirmPassword.CustomizableEdges = customizableEdges19;
+            txt_ConfirmPassword.DefaultText = "";
+            txt_ConfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_ConfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_ConfirmPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_ConfirmPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_ConfirmPassword.FocusedState.BorderColor = Color.DodgerBlue;
+            txt_ConfirmPassword.Font = new Font("Segoe UI", 9F);
+            txt_ConfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_ConfirmPassword.Location = new Point(208, 217);
+            txt_ConfirmPassword.Margin = new Padding(3, 4, 3, 4);
+            txt_ConfirmPassword.Name = "txt_ConfirmPassword";
+            txt_ConfirmPassword.PlaceholderText = "";
+            txt_ConfirmPassword.SelectedText = "";
+            txt_ConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txt_ConfirmPassword.Size = new Size(125, 27);
+            txt_ConfirmPassword.TabIndex = 15;
+            // 
             // RegisterScreenControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(txt_ConfirmPassword);
+            Controls.Add(txt_NewPassword);
+            Controls.Add(txt_NewUsername);
+            Controls.Add(guna2Button2);
+            Controls.Add(guna2Button1);
             Controls.Add(label5);
             Controls.Add(cmb_Age);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(txt_ConfirmPassword);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(txt_NewPassword);
-            Controls.Add(txt_NewUsername);
-            Controls.Add(btn_BackToLogin);
-            Controls.Add(btn_Register);
             Name = "RegisterScreenControl";
             Size = new Size(1024, 720);
             ResumeLayout(false);
@@ -162,17 +231,16 @@
         }
 
         #endregion
-
-        private Button btn_Register;
-        private Button btn_BackToLogin;
-        private TextBox txt_NewUsername;
-        private TextBox txt_NewPassword;
         private Label label1;
         private Label label2;
-        private TextBox txt_ConfirmPassword;
         private Label label3;
         private Label label4;
         private ComboBox cmb_Age;
         private Label label5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2TextBox txt_NewUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txt_NewPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txt_ConfirmPassword;
     }
 }

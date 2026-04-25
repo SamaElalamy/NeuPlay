@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             groupBox1 = new GroupBox();
@@ -51,11 +53,11 @@
             label5 = new Label();
             radioButton12 = new RadioButton();
             groupBox5 = new GroupBox();
-            button1 = new Button();
             radioButton13 = new RadioButton();
             radioButton14 = new RadioButton();
             label6 = new Label();
             radioButton15 = new RadioButton();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             flowLayoutPanel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -315,27 +317,17 @@
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(button1);
             groupBox5.Controls.Add(radioButton13);
             groupBox5.Controls.Add(radioButton14);
             groupBox5.Controls.Add(label6);
             groupBox5.Controls.Add(radioButton15);
+            groupBox5.Controls.Add(guna2Button1);
             groupBox5.Location = new Point(3, 575);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(517, 125);
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
             groupBox5.Text = "groupBox5";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(8, 104);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // radioButton13
             // 
@@ -378,6 +370,24 @@
             radioButton15.TabStop = true;
             radioButton15.Text = "radioButton15";
             radioButton15.UseVisualStyleBackColor = true;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(0, 96);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(89, 29);
+            guna2Button1.TabIndex = 8;
+            guna2Button1.Text = "submit";
+            guna2Button1.Click += button1_Click;
             // 
             // DiagnosisScreenControl
             // 
@@ -430,6 +440,6 @@
         private RadioButton radioButton14;
         private Label label6;
         private RadioButton radioButton15;
-        private Button button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

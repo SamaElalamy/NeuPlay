@@ -8,6 +8,8 @@ namespace NeuPlay
         public PrivacyPolicyControl()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
         }
 
         private void chk_Agree_CheckedChanged(object sender, EventArgs e)

@@ -28,21 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartControl));
-            button1 = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
-            // button1
+            // guna2Button1
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(416, 520);
-            button1.Name = "button1";
-            button1.Size = new Size(177, 59);
-            button1.TabIndex = 1;
-            button1.Tag = "start_button";
-            button1.Text = "Start";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(410, 567);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(202, 60);
+            guna2Button1.TabIndex = 0;
+            guna2Button1.Text = "Start";
+            guna2Button1.Click += button1_Click;
             // 
             // StartControl
             // 
@@ -50,7 +58,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            Controls.Add(button1);
+            Controls.Add(guna2Button1);
             Name = "StartControl";
             Size = new Size(1024, 720);
             ResumeLayout(false);
@@ -58,6 +66,6 @@
 
         #endregion
 
-        private Button button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

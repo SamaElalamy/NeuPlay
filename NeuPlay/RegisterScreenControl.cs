@@ -8,6 +8,8 @@ namespace NeuPlay
         public RegisterScreenControl()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
