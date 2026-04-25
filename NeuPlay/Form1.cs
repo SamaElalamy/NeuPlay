@@ -13,7 +13,7 @@ namespace NeuPlay
             pnl_MainContent.Controls.Add(newScreen);
             newScreen.BringToFront();
         }
-        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,19 @@ namespace NeuPlay
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 parent = (Form1)this.FindForm();
+            if (parent != null)
+            {
+                parent.LoadScreen(new PrivacyPolicyControl());
+            }
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pnl_MainContent_Paint(object sender, PaintEventArgs e)
         {
 

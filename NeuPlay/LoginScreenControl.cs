@@ -22,7 +22,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new DashboardControl());
+                parentForm.LoadScreen(new DashboardControl(txt_Username.Text, 0));
             }
         }
 

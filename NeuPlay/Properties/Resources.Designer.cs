@@ -63,9 +63,109 @@ namespace NeuPlay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Apr_22__2026__08_48_33_PM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Apr 22, 2026, 08_48_33 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Colorful_Photo_Rainbow_Facebook_Cover__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Colorful Photo Rainbow Facebook Cover (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copy_of_Where_Learning_Meets_Play__2_ {
             get {
                 object obj = ResourceManager.GetObject("Copy of Where Learning Meets Play (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_3izssl3izssl3izs {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_3izssl3izssl3izs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_9m6gyn9m6gyn9m6g {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_9m6gyn9m6gyn9m6g", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_dlrhzldlrhzldlrh__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_dlrhzldlrhzldlrh (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_dlrhzldlrhzldlrh__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_dlrhzldlrhzldlrh (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_egrrhgegrrhgegrr {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_egrrhgegrrhgegrr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_ipsp0wipsp0wipsp {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_ipsp0wipsp0wipsp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_kwyp8vkwyp8vkwyp {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_kwyp8vkwyp8vkwyp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_kwyp8vkwyp8vkwyp1 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_kwyp8vkwyp8vkwyp1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
