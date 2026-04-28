@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnback = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -36,17 +37,8 @@
             txt_Age = new TextBox();
             txt_Password = new TextBox();
             label5 = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
-            // 
-            // btnback
-            // 
-            btnback.Location = new Point(24, 488);
-            btnback.Name = "btnback";
-            btnback.Size = new Size(128, 56);
-            btnback.TabIndex = 11;
-            btnback.Text = "Back";
-            btnback.UseVisualStyleBackColor = true;
-            btnback.Click += btn_Back_Click;
             // 
             // label1
             // 
@@ -110,10 +102,29 @@
             label5.Text = "My Profile";
             label5.TextAlign = ContentAlignment.TopCenter;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(24, 492);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(128, 56);
+            guna2Button1.TabIndex = 19;
+            guna2Button1.Text = "Back";
+            guna2Button1.Click += btn_Back_Click;
+            // 
             // ProfileControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2Button1);
             Controls.Add(label5);
             Controls.Add(txt_Password);
             Controls.Add(txt_Age);
@@ -121,7 +132,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(btnback);
             Name = "ProfileControl";
             Size = new Size(1024, 720);
             ResumeLayout(false);
@@ -129,8 +139,6 @@
         }
 
         #endregion
-
-        private Button btnback;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -138,5 +146,6 @@
         private TextBox txt_Age;
         private TextBox txt_Password;
         private Label label5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

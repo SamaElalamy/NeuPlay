@@ -8,6 +8,7 @@ namespace NeuPlay
         public NumbersLand()
         {
             InitializeComponent();
+            Theme.ApplyTheme(this);
         }
 
 

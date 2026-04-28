@@ -8,6 +8,7 @@ namespace NeuPlay
         public ServicesScreenControl()
         {
             InitializeComponent();
+            Theme.ApplyTheme(this);
         }
 
 

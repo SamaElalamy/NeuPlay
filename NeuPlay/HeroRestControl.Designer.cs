@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeroRestControl));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             btn_Tips = new Button();
             btn_Stories = new Button();
             btn_Parental = new Button();
-            BACK = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -93,21 +95,28 @@
             btn_Parental.UseVisualStyleBackColor = true;
             btn_Parental.Click += btn_Parental_Click;
             // 
-            // BACK
+            // guna2Button1
             // 
-            BACK.Location = new Point(16, 472);
-            BACK.Name = "BACK";
-            BACK.Size = new Size(136, 45);
-            BACK.TabIndex = 5;
-            BACK.Text = "Back to Services";
-            BACK.UseVisualStyleBackColor = true;
-            BACK.Click += BACK_Click;
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(22, 475);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(144, 45);
+            guna2Button1.TabIndex = 6;
+            guna2Button1.Text = "Back to Services";
             // 
             // HeroRestControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(BACK);
+            Controls.Add(guna2Button1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Name = "HeroRestControl";
@@ -123,6 +132,6 @@
         private Button btn_Tips;
         private Button btn_Stories;
         private Button btn_Parental;
-        private Button BACK;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

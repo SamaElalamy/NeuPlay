@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbl_Welcome = new Label();
             lbl_Level = new Label();
             lbl_Score = new Label();
@@ -35,9 +37,9 @@
             btn_Achievements = new Button();
             btn_Profile = new Button();
             label5 = new Label();
-            btn_Play = new Button();
             TitleLable = new Label();
             ChildLogo = new PictureBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)ChildLogo).BeginInit();
             SuspendLayout();
             // 
@@ -118,16 +120,6 @@
             label5.Text = "Dashboard";
             label5.TextAlign = ContentAlignment.TopCenter;
             // 
-            // btn_Play
-            // 
-            btn_Play.Location = new Point(432, 608);
-            btn_Play.Name = "btn_Play";
-            btn_Play.Size = new Size(128, 56);
-            btn_Play.TabIndex = 10;
-            btn_Play.Text = "Let's Start!";
-            btn_Play.UseVisualStyleBackColor = true;
-            btn_Play.Click += btn_Play_Click;
-            // 
             // TitleLable
             // 
             TitleLable.AutoSize = true;
@@ -148,13 +140,31 @@
             ChildLogo.TabIndex = 12;
             ChildLogo.TabStop = false;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(432, 599);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(127, 56);
+            guna2Button1.TabIndex = 13;
+            guna2Button1.Text = "Let's Start!";
+            guna2Button1.Click += btn_Play_Click;
+            // 
             // DashboardControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2Button1);
             Controls.Add(ChildLogo);
             Controls.Add(TitleLable);
-            Controls.Add(btn_Play);
             Controls.Add(label5);
             Controls.Add(btn_Profile);
             Controls.Add(btn_Achievements);
@@ -164,7 +174,6 @@
             Controls.Add(lbl_Welcome);
             Name = "DashboardControl";
             Size = new Size(1024, 720);
-            
             ((System.ComponentModel.ISupportInitialize)ChildLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -179,8 +188,8 @@
         private Button btn_Achievements;
         private Button btn_Profile;
         private Label label5;
-        private Button btn_Play;
         private Label TitleLable;
         private PictureBox ChildLogo;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

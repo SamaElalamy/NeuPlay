@@ -9,6 +9,7 @@ namespace NeuPlay
         {
             InitializeComponent();
             LoadUserData();
+            Theme.ApplyTheme(this);
         }
 
         private void LoadUserData()

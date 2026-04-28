@@ -13,6 +13,8 @@ namespace NeuPlay
             AddBadge("Numbers Hero 🏆", Color.Gold);
             AddBadge("Quick Solver ⚡", Color.SkyBlue);
             AddBadge("New Explorer 🌟", Color.LightGreen);
+
+            Theme.ApplyTheme(this);
         }
 
         private void AddBadge(string title, Color bgColor)

@@ -20,6 +20,8 @@ namespace NeuPlay
             else if (category == "Parental") totalImages = 2;
 
             ShowCurrentImage();
+
+            Theme.ApplyTheme(this);
         }
 
         // دالة العرض (دي اللي هيتحط فيها الصور بعدين)

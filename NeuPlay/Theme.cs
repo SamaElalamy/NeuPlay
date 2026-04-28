@@ -4,31 +4,26 @@ using Guna.UI2.WinForms;
 
 namespace NeuPlay
 {
-    internal class Theme
+    public class Theme
     {
-
+        //دي باليت الالوان اللي هنستخدمها
         public static class Palette
         {
-            public static Color Background = ColorTranslator.FromHtml("#F9EBF9");
-            public static Color PrimaryBlue = ColorTranslator.FromHtml("#5B7FFF");
-            public static Color FunYellow = ColorTranslator.FromHtml("#FFD35B");
-            public static Color MainPurple = ColorTranslator.FromHtml("#9B6FFF");
-            public static Color Text = Color.FromArgb(40, 40, 40);
+            public static Color Background = ColorTranslator.FromHtml("#F9EBF9"); //وردي
+            public static Color PrimaryBlue = ColorTranslator.FromHtml("#5B7FFF"); //ازرق
+            public static Color FunYellow = ColorTranslator.FromHtml("#FFD35B"); //اصفر
+            public static Color MainPurple = ColorTranslator.FromHtml("#9B6FFF"); //بربل
+            public static Color Text = Color.FromArgb(40, 40, 40); //لون التيكست رمادي غامق
 
         }
-
-
 
         public static void ApplyTheme(Control screen)
         {
             screen.BackColor = Palette.Background;
 
-
-
-
             foreach (Control c in screen.Controls)
             {
-
+                //خانات التيكست(Guna2)
                 if (c is Guna2TextBox txt)
                 {
                     txt.BorderRadius = 15;
@@ -37,11 +32,9 @@ namespace NeuPlay
                     txt.FillColor = Color.White;
                     txt.ForeColor = Color.Black;
                     txt.Font = new Font("Segoe UI", 12);
-
-                    txt.Font = new Font("Segoe UI", 12);
                 }
 
-
+                //الازرار(Guna2)
                 if (c is Guna2Button button)
                 {
                     button.FillColor = Palette.PrimaryBlue;
@@ -50,13 +43,12 @@ namespace NeuPlay
                     button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                 }
 
-
-                if (c is Guna2ComboBox combo)
+                //دي للقائمه زي بتاعت العمر
+                if(c is Guna2ComboBox combo)
                 {
-                    combo.BorderRadius = 15;
-                    combo.FocusedState.BorderColor = Palette.PrimaryBlue;
+                    combo.BorderRadius = 10;
+                    combo.FocusedState.BorderColor= Palette.PrimaryBlue;
                 }
-
 
                 if (c.HasChildren)
                 {
