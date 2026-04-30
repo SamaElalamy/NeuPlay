@@ -17,8 +17,8 @@ namespace NeuPlay
         public StairsLevelControl()
         {
             InitializeComponent();
-            
-            trackingSystem = new TrackingSystem(5,progressBar1);
+
+            trackingSystem = new TrackingSystem(5, progressBar1);
             Labels = new Label[] { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
             TextBoxes = new TextBox[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, textBox8, textBox9, textBox10 };
 
@@ -67,7 +67,7 @@ namespace NeuPlay
 
             while (currentMissing < 2) // لو عدد اقل من 2 بتختار مربعات تانيه و تظهرها 
             {
-                int rnd = random.Next(0,10); //يختار مكان عشوائي
+                int rnd = random.Next(0, 10); //يختار مكان عشوائي
 
                 if (!TextBoxes[rnd].Visible)
                 {
@@ -105,7 +105,7 @@ namespace NeuPlay
 
                 pic_Bunny.Location = bunnyStartLocation; //الارنب يرجع مكانه
 
-                if(finish)
+                if (finish)
                 {
                     MessageBox.Show("مبروك! شريط التقدم اكتمل والأرنب فاز بالبطولة 🏆");
 
@@ -134,7 +134,7 @@ namespace NeuPlay
                 }
             }
 
-            
+
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -187,6 +187,11 @@ namespace NeuPlay
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }

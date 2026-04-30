@@ -14,7 +14,7 @@ namespace NeuPlay
         public CompareLevelControl()
         {
             InitializeComponent();
-            tracker = new TrackingSystem(5,progressBar1); //هيلعب 5 جولات
+            tracker = new TrackingSystem(5, progressBar1); //هيلعب 5 جولات
             GenerateQuestion();
             Theme.ApplyTheme(this);
 
@@ -121,6 +121,11 @@ namespace NeuPlay
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
