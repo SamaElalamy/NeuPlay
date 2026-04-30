@@ -28,42 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbl_Num1 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbl_Operator = new Label();
-            lbl_Num2 = new Label();
             btn_Greater = new Button();
             btn_Equal = new Button();
             btn_Less = new Button();
-            btn_Back = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            textBox1 = new TextBox();
+            progressBar1 = new ProgressBar();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // lbl_Num1
-            // 
-            lbl_Num1.Location = new Point(88, 128);
-            lbl_Num1.Name = "lbl_Num1";
-            lbl_Num1.Size = new Size(232, 225);
-            lbl_Num1.TabIndex = 0;
-            lbl_Num1.Text = "label1";
             // 
             // lbl_Operator
             // 
-            lbl_Operator.Location = new Point(376, 136);
+            lbl_Operator.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_Operator.ForeColor = Color.DodgerBlue;
+            lbl_Operator.Location = new Point(458, 249);
             lbl_Operator.Name = "lbl_Operator";
-            lbl_Operator.Size = new Size(232, 225);
+            lbl_Operator.Size = new Size(105, 69);
             lbl_Operator.TabIndex = 1;
             lbl_Operator.Text = "?";
-            // 
-            // lbl_Num2
-            // 
-            lbl_Num2.Location = new Point(664, 136);
-            lbl_Num2.Name = "lbl_Num2";
-            lbl_Num2.Size = new Size(232, 225);
-            lbl_Num2.TabIndex = 2;
-            lbl_Num2.Text = "label3";
+            lbl_Operator.TextAlign = ContentAlignment.MiddleCenter;
+            lbl_Operator.Click += lbl_Operator_Click;
             // 
             // btn_Greater
             // 
-            btn_Greater.Location = new Point(232, 448);
+            btn_Greater.Location = new Point(275, 516);
             btn_Greater.Name = "btn_Greater";
             btn_Greater.Size = new Size(120, 69);
             btn_Greater.TabIndex = 3;
@@ -73,7 +67,7 @@
             // 
             // btn_Equal
             // 
-            btn_Equal.Location = new Point(424, 440);
+            btn_Equal.Location = new Point(458, 516);
             btn_Equal.Name = "btn_Equal";
             btn_Equal.Size = new Size(120, 69);
             btn_Equal.TabIndex = 4;
@@ -83,7 +77,7 @@
             // 
             // btn_Less
             // 
-            btn_Less.Location = new Point(616, 440);
+            btn_Less.Location = new Point(648, 516);
             btn_Less.Name = "btn_Less";
             btn_Less.Size = new Size(120, 69);
             btn_Less.TabIndex = 5;
@@ -91,40 +85,95 @@
             btn_Less.UseVisualStyleBackColor = true;
             btn_Less.Click += btn_Less_Click;
             // 
-            // btn_Back
+            // guna2Button1
             // 
-            btn_Back.Location = new Point(16, 16);
-            btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(94, 29);
-            btn_Back.TabIndex = 6;
-            btn_Back.Text = "Back";
-            btn_Back.UseVisualStyleBackColor = true;
-            btn_Back.Click += btn_Back_Click;
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(912, 16);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(94, 29);
+            guna2Button1.TabIndex = 7;
+            guna2Button1.Text = "Back";
+            guna2Button1.Click += btn_Back_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Location = new Point(597, 84);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(331, 407);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Location = new Point(98, 84);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(331, 407);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 9;
+            pictureBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.LightSteelBlue;
+            textBox1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.Navy;
+            textBox1.Location = new Point(13, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(507, 51);
+            textBox1.TabIndex = 10;
+            textBox1.Text = "Compare between Two numbers";
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(307, 603);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(427, 29);
+            progressBar1.TabIndex = 11;
+            progressBar1.Click += progressBar1_Click;
             // 
             // CompareLevelControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btn_Back);
+            Controls.Add(progressBar1);
+            Controls.Add(textBox1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(guna2Button1);
             Controls.Add(btn_Less);
             Controls.Add(btn_Equal);
             Controls.Add(btn_Greater);
-            Controls.Add(lbl_Num2);
             Controls.Add(lbl_Operator);
-            Controls.Add(lbl_Num1);
             Name = "CompareLevelControl";
-            Size = new Size(1024, 720);
+            Size = new Size(1026, 918);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Label lbl_Num1;
         private Label lbl_Operator;
-        private Label lbl_Num2;
         private Button btn_Greater;
         private Button btn_Equal;
         private Button btn_Less;
-        private Button btn_Back;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private TextBox textBox1;
+        private ProgressBar progressBar1;
     }
 }

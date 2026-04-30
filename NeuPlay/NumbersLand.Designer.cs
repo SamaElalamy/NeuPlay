@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NumbersLand));
             label4 = new Label();
             btn_Start = new Button();
-            BACK = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // label4
@@ -59,21 +59,29 @@
             btn_Start.UseVisualStyleBackColor = true;
             btn_Start.Click += btn_Start_Click;
             // 
-            // BACK
+            // guna2Button1
             // 
-            BACK.Location = new Point(8, 640);
-            BACK.Name = "BACK";
-            BACK.Size = new Size(96, 45);
-            BACK.TabIndex = 12;
-            BACK.Text = "Back ";
-            BACK.UseVisualStyleBackColor = true;
-            BACK.Click += btn_Back_Click;
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(12, 638);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(123, 41);
+            guna2Button1.TabIndex = 12;
+            guna2Button1.Text = "Back";
+            guna2Button1.Click += btn_Back_Click;
             // 
             // NumbersLand
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(BACK);
+            Controls.Add(guna2Button1);
             Controls.Add(btn_Start);
             Controls.Add(label4);
             Name = "NumbersLand";
@@ -86,6 +94,6 @@
 
         private Label label4;
         private Button btn_Start;
-        private Button BACK;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

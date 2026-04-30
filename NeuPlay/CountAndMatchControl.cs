@@ -7,29 +7,40 @@ namespace NeuPlay
 {
     public partial class CountAndMatchControl : UserControl
     {
-        int correctAnswer;
+        int currentNumber = 1; //هيبدا من 1 ل 10
         Random rnd = new Random();
 
         public CountAndMatchControl()
         {
             InitializeComponent();
             GenerateQuestion(); 
+            Theme.ApplyTheme(this);
         }
 
         private void GenerateQuestion()
         {
-            // بنختار رقم عشوائي من 1 لـ 4 (زي ما في الديزاين بتاعك)
-            correctAnswer = rnd.Next(1, 5);
+            int correctAnswer = currentNumber; //الرقم اللي عليه الدور
 
-            // ملحوظة لسلمى: هنا هتحط كود يغير الصورة بناءً على الرقم
-            // مثال: لو الرقم 3، تظهر صورة الـ 3 نجوم
-            // if (correctAnswer == 3) pic_Quantity.Image = Properties.Resources.ThreeStars;
+            //اختيار الصوره بالترتيب
+            switch (correctAnswer)
+            {
+                case 1: pic_Quantity.Image = Properties.Resources._1; break;
+                case 2: pic_Quantity.Image = Properties.Resources._2; break;
+                case 3: pic_Quantity.Image = Properties.Resources._3; break;
+                case 4: pic_Quantity.Image = Properties.Resources._4; break;
+                case 5: pic_Quantity.Image = Properties.Resources._5; break;
+                case 6: pic_Quantity.Image = Properties.Resources._6; break;
+                case 7: pic_Quantity.Image = Properties.Resources._7; break;
+                case 8: pic_Quantity.Image = Properties.Resources._8; break;
+                case 9: pic_Quantity.Image = Properties.Resources._9; break;
+                case 10: pic_Quantity.Image = Properties.Resources._10; break;
+            }
 
             // نجهز 4 اختيارات (واحد صح وتلاتة غلط)
             List<int> choices = new List<int> { correctAnswer };
             while (choices.Count < 4)
             {
-                int wrongAnswer = rnd.Next(1, 10);
+                int wrongAnswer = rnd.Next(1, 11);
                 if (!choices.Contains(wrongAnswer))
                 {
                     choices.Add(wrongAnswer);
@@ -48,14 +59,21 @@ namespace NeuPlay
 
         private void CheckAnswer(int selectedNum)
         {
-            if (selectedNum == correctAnswer)
+            if (selectedNum == currentNumber)
             {
-                MessageBox.Show("إجابة صحيحة! برافو 🌟", "ممتاز", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                Form1 parentForm = (Form1)this.FindForm();
-                if (parentForm != null) parentForm.LoadScreen(new CollectLevelControl());
+                if(currentNumber < 10)
+                {
+                    MessageBox.Show("إجابة صحيحة! برافو 🌟", "ممتاز", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    currentNumber++;
+                    GenerateQuestion();
+                }
+                else
+                {
+                    MessageBox.Show("مبروك! تعلمت الأرقام من 1 لـ 10 بنجاح 🏆", "بطل الأرقام");
 
-                GenerateQuestion(); // مؤقتاً بنجيب سؤال جديد في نفس الشاشة
+                    Form1 parentForm = (Form1)this.FindForm();
+                    if (parentForm != null) parentForm.LoadScreen(new CollectLevelControl());
+                }
             }
             else
             {

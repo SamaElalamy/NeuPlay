@@ -8,6 +8,7 @@ namespace NeuPlay
         public SpellQuest()
         {
             InitializeComponent();
+            Theme.ApplyTheme(this);
         }
 
 

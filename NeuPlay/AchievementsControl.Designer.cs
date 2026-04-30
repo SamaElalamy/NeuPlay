@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnback = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label5 = new Label();
             flp_Achievements = new FlowLayoutPanel();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
-            // 
-            // btnback
-            // 
-            btnback.BackColor = Color.FromArgb(155, 111, 255);
-            btnback.Font = new Font("Arial Rounded MT Bold", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnback.Location = new Point(32, 600);
-            btnback.Name = "btnback";
-            btnback.Size = new Size(144, 56);
-            btnback.TabIndex = 12;
-            btnback.Text = "Back";
-            btnback.UseVisualStyleBackColor = false;
-            btnback.Click += btn_Back_Click;
             // 
             // label5
             // 
@@ -66,6 +56,24 @@
             flp_Achievements.Size = new Size(944, 408);
             flp_Achievements.TabIndex = 14;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(18, 504);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(145, 56);
+            guna2Button1.TabIndex = 15;
+            guna2Button1.Text = "Back";
+            guna2Button1.Click += btn_Back_Click;
+            // 
             // AchievementsControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -80,9 +88,8 @@
         }
 
         #endregion
-
-        private Button btnback;
         private Label label5;
         private FlowLayoutPanel flp_Achievements;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

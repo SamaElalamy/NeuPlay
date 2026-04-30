@@ -17,6 +17,8 @@ namespace NeuPlay
             lbl_Score.Text = "Score: " + currentScore.ToString();
             lbl_Level.Text = "Level: 1";
 
+            Theme.ApplyTheme(this);
+
 
             if (currentScore >= 50)
                 lbl_Badge.Text = "Numbers' Nerd 🌟";

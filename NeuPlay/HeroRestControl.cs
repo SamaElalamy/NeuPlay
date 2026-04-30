@@ -8,6 +8,7 @@ namespace NeuPlay
         public HeroRestControl()
         {
             InitializeComponent();
+            Theme.ApplyTheme(this);
         }
 
         private void btn_Tips_Click(object sender, EventArgs e)

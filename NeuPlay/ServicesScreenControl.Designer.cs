@@ -65,6 +65,7 @@
             // 
             // btn_HeroRest
             // 
+            btn_HeroRest.BackColor = Color.LavenderBlush;
             btn_HeroRest.BackgroundImage = (Image)resources.GetObject("btn_HeroRest.BackgroundImage");
             btn_HeroRest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_HeroRest.FlatAppearance.BorderSize = 0;
@@ -73,7 +74,7 @@
             btn_HeroRest.Name = "btn_HeroRest";
             btn_HeroRest.Size = new Size(312, 344);
             btn_HeroRest.TabIndex = 3;
-            btn_HeroRest.UseVisualStyleBackColor = true;
+            btn_HeroRest.UseVisualStyleBackColor = false;
             btn_HeroRest.Click += btn_HeroRest_Click_1;
             // 
             // label2
