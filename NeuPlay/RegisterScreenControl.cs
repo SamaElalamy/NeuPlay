@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NeuPlay
 {
@@ -9,20 +10,20 @@ namespace NeuPlay
         {
             InitializeComponent();
 
-            Theme.ApplyTheme(this);
+
         }
 
-        private void btn_Register_Click(object sender, EventArgs e)
-        {
 
-            if (string.IsNullOrWhiteSpace(txt_NewUsername.Text) || string.IsNullOrWhiteSpace(txt_NewPassword.Text))
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(NewUsername.Text) || string.IsNullOrWhiteSpace(NewPassword.Text))
             {
                 MessageBox.Show("Please complete the registering process", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
 
-            if (txt_NewPassword.Text != txt_ConfirmPassword.Text)
+            if (NewPassword.Text != ConfirmPassword.Text)
             {
                 MessageBox.Show("Password is not correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -42,11 +43,11 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new DashboardControl(txt_NewUsername.Text, 0));
+                parentForm.LoadScreen(new DashboardControl(NewUsername.Text, 0));
             }
         }
 
-        private void btn_BackToLogin_Click(object sender, EventArgs e)
+        private void LogInbtn_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
@@ -54,5 +55,6 @@ namespace NeuPlay
                 parentForm.LoadScreen(new LoginScreenControl());
             }
         }
+
     }
 }

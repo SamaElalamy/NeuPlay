@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             groupBox1 = new GroupBox();
@@ -47,23 +45,30 @@
             radioButton8 = new RadioButton();
             label4 = new Label();
             radioButton9 = new RadioButton();
-            groupBox4 = new GroupBox();
-            radioButton10 = new RadioButton();
-            radioButton11 = new RadioButton();
-            label5 = new Label();
-            radioButton12 = new RadioButton();
             groupBox5 = new GroupBox();
             radioButton13 = new RadioButton();
             radioButton14 = new RadioButton();
             label6 = new Label();
             radioButton15 = new RadioButton();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            Submitbtn = new Button();
+            groupBox4 = new GroupBox();
+            radioButton10 = new RadioButton();
+            radioButton11 = new RadioButton();
+            label5 = new Label();
+            radioButton12 = new RadioButton();
+            groupBox6 = new GroupBox();
+            btn_submit = new RoundedButton();
+            radioButton16 = new RadioButton();
+            radioButton17 = new RadioButton();
+            label7 = new Label();
+            radioButton18 = new RadioButton();
             flowLayoutPanel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
+            groupBox4.SuspendLayout();
+            groupBox6.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -74,7 +79,7 @@
             flowLayoutPanel1.Controls.Add(groupBox2);
             flowLayoutPanel1.Controls.Add(groupBox3);
             flowLayoutPanel1.Controls.Add(groupBox4);
-            flowLayoutPanel1.Controls.Add(groupBox5);
+            flowLayoutPanel1.Controls.Add(groupBox6);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -85,14 +90,14 @@
             // label1
             // 
             label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label1.ImageAlign = ContentAlignment.TopCenter;
+            label1.Font = new Font("Arial Rounded MT Bold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ImageAlign = ContentAlignment.MiddleLeft;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1024, 48);
+            label1.Size = new Size(1024, 56);
             label1.TabIndex = 2;
             label1.Text = "Diagnose Test\r\n";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // groupBox1
             // 
@@ -100,9 +105,9 @@
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(3, 51);
+            groupBox1.Location = new Point(3, 59);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(517, 125);
+            groupBox1.Size = new Size(989, 125);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
@@ -156,9 +161,9 @@
             groupBox2.Controls.Add(radioButton5);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(radioButton6);
-            groupBox2.Location = new Point(3, 182);
+            groupBox2.Location = new Point(3, 190);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(517, 125);
+            groupBox2.Size = new Size(989, 125);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "groupBox2";
@@ -211,9 +216,10 @@
             groupBox3.Controls.Add(radioButton8);
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(radioButton9);
-            groupBox3.Location = new Point(3, 313);
+            groupBox3.Controls.Add(groupBox5);
+            groupBox3.Location = new Point(3, 321);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(517, 125);
+            groupBox3.Size = new Size(997, 125);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "groupBox3";
@@ -260,71 +266,16 @@
             radioButton9.Text = "radioButton9";
             radioButton9.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(radioButton10);
-            groupBox4.Controls.Add(radioButton11);
-            groupBox4.Controls.Add(label5);
-            groupBox4.Controls.Add(radioButton12);
-            groupBox4.Location = new Point(3, 444);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(517, 125);
-            groupBox4.TabIndex = 6;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "groupBox4";
-            // 
-            // radioButton10
-            // 
-            radioButton10.AutoSize = true;
-            radioButton10.Location = new Point(272, 80);
-            radioButton10.Name = "radioButton10";
-            radioButton10.Size = new Size(125, 24);
-            radioButton10.TabIndex = 6;
-            radioButton10.TabStop = true;
-            radioButton10.Text = "radioButton10";
-            radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            radioButton11.AutoSize = true;
-            radioButton11.Location = new Point(144, 80);
-            radioButton11.Name = "radioButton11";
-            radioButton11.Size = new Size(125, 24);
-            radioButton11.TabIndex = 5;
-            radioButton11.TabStop = true;
-            radioButton11.Text = "radioButton11";
-            radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(16, 32);
-            label5.Name = "label5";
-            label5.Size = new Size(31, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Q1:";
-            // 
-            // radioButton12
-            // 
-            radioButton12.AutoSize = true;
-            radioButton12.Location = new Point(8, 80);
-            radioButton12.Name = "radioButton12";
-            radioButton12.Size = new Size(125, 24);
-            radioButton12.TabIndex = 4;
-            radioButton12.TabStop = true;
-            radioButton12.Text = "radioButton12";
-            radioButton12.UseVisualStyleBackColor = true;
-            // 
             // groupBox5
             // 
             groupBox5.Controls.Add(radioButton13);
             groupBox5.Controls.Add(radioButton14);
             groupBox5.Controls.Add(label6);
             groupBox5.Controls.Add(radioButton15);
-            groupBox5.Controls.Add(guna2Button1);
-            groupBox5.Location = new Point(3, 575);
+            groupBox5.Controls.Add(Submitbtn);
+            groupBox5.Location = new Point(56, 123);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(517, 125);
+            groupBox5.Size = new Size(989, 125);
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
             groupBox5.Text = "groupBox5";
@@ -371,23 +322,142 @@
             radioButton15.Text = "radioButton15";
             radioButton15.UseVisualStyleBackColor = true;
             // 
-            // guna2Button1
+            // Submitbtn
             // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(0, 96);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(89, 29);
-            guna2Button1.TabIndex = 8;
-            guna2Button1.Text = "submit";
-            guna2Button1.Click += button1_Click;
+            Submitbtn.Location = new Point(888, 88);
+            Submitbtn.Name = "Submitbtn";
+            Submitbtn.Size = new Size(94, 29);
+            Submitbtn.TabIndex = 8;
+            Submitbtn.Text = "Submit";
+            Submitbtn.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(radioButton10);
+            groupBox4.Controls.Add(radioButton11);
+            groupBox4.Controls.Add(label5);
+            groupBox4.Controls.Add(radioButton12);
+            groupBox4.Location = new Point(3, 452);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(989, 125);
+            groupBox4.TabIndex = 6;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "groupBox4";
+            // 
+            // radioButton10
+            // 
+            radioButton10.AutoSize = true;
+            radioButton10.Location = new Point(272, 80);
+            radioButton10.Name = "radioButton10";
+            radioButton10.Size = new Size(125, 24);
+            radioButton10.TabIndex = 6;
+            radioButton10.TabStop = true;
+            radioButton10.Text = "radioButton10";
+            radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            radioButton11.AutoSize = true;
+            radioButton11.Location = new Point(144, 80);
+            radioButton11.Name = "radioButton11";
+            radioButton11.Size = new Size(125, 24);
+            radioButton11.TabIndex = 5;
+            radioButton11.TabStop = true;
+            radioButton11.Text = "radioButton11";
+            radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(16, 32);
+            label5.Name = "label5";
+            label5.Size = new Size(31, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Q1:";
+            // 
+            // radioButton12
+            // 
+            radioButton12.AutoSize = true;
+            radioButton12.Location = new Point(8, 80);
+            radioButton12.Name = "radioButton12";
+            radioButton12.Size = new Size(125, 24);
+            radioButton12.TabIndex = 4;
+            radioButton12.TabStop = true;
+            radioButton12.Text = "radioButton12";
+            radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(btn_submit);
+            groupBox6.Controls.Add(radioButton16);
+            groupBox6.Controls.Add(radioButton17);
+            groupBox6.Controls.Add(label7);
+            groupBox6.Controls.Add(radioButton18);
+            groupBox6.Location = new Point(3, 583);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(989, 125);
+            groupBox6.TabIndex = 9;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "groupBox6";
+            groupBox6.Enter += groupBox6_Enter;
+            // 
+            // btn_submit
+            // 
+            btn_submit.BackColor = Color.FromArgb(106, 36, 138);
+            btn_submit.BorderRadius = 20;
+            btn_submit.FlatAppearance.BorderSize = 0;
+            btn_submit.FlatStyle = FlatStyle.Flat;
+            btn_submit.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_submit.ForeColor = Color.White;
+            btn_submit.Location = new Point(800, 56);
+            btn_submit.Name = "btn_submit";
+            btn_submit.Size = new Size(134, 64);
+            btn_submit.TabIndex = 9;
+            btn_submit.Text = "Submit";
+            btn_submit.UseVisualStyleBackColor = false;
+            btn_submit.Click += btn_submit_Click;
+            // 
+            // radioButton16
+            // 
+            radioButton16.AutoSize = true;
+            radioButton16.Location = new Point(272, 80);
+            radioButton16.Name = "radioButton16";
+            radioButton16.Size = new Size(125, 24);
+            radioButton16.TabIndex = 6;
+            radioButton16.TabStop = true;
+            radioButton16.Text = "radioButton16";
+            radioButton16.UseVisualStyleBackColor = true;
+            // 
+            // radioButton17
+            // 
+            radioButton17.AutoSize = true;
+            radioButton17.Location = new Point(144, 80);
+            radioButton17.Name = "radioButton17";
+            radioButton17.Size = new Size(125, 24);
+            radioButton17.TabIndex = 5;
+            radioButton17.TabStop = true;
+            radioButton17.Text = "radioButton17";
+            radioButton17.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(16, 32);
+            label7.Name = "label7";
+            label7.Size = new Size(31, 20);
+            label7.TabIndex = 4;
+            label7.Text = "Q1:";
+            // 
+            // radioButton18
+            // 
+            radioButton18.AutoSize = true;
+            radioButton18.Location = new Point(8, 80);
+            radioButton18.Name = "radioButton18";
+            radioButton18.Size = new Size(125, 24);
+            radioButton18.TabIndex = 4;
+            radioButton18.TabStop = true;
+            radioButton18.Text = "radioButton18";
+            radioButton18.UseVisualStyleBackColor = true;
             // 
             // DiagnosisScreenControl
             // 
@@ -404,10 +474,12 @@
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -440,6 +512,12 @@
         private RadioButton radioButton14;
         private Label label6;
         private RadioButton radioButton15;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Button Submitbtn;
+        private GroupBox groupBox6;
+        private RadioButton radioButton16;
+        private RadioButton radioButton17;
+        private Label label7;
+        private RadioButton radioButton18;
+        private RoundedButton btn_submit;
     }
 }

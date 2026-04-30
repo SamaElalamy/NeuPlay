@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             lbl_FinalResult = new Label();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            CreatingAccountbtn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -59,29 +57,21 @@
             lbl_FinalResult.Text = "Result Of The Test";
             lbl_FinalResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // guna2Button1
+            // CreatingAccountbtn
             // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(394, 387);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(225, 56);
-            guna2Button1.TabIndex = 5;
-            guna2Button1.Text = "create an account";
-            guna2Button1.Click += btn_GoToLogin_Click_1;
+            CreatingAccountbtn.Location = new Point(424, 424);
+            CreatingAccountbtn.Name = "CreatingAccountbtn";
+            CreatingAccountbtn.Size = new Size(152, 45);
+            CreatingAccountbtn.TabIndex = 5;
+            CreatingAccountbtn.Text = "create an account";
+            CreatingAccountbtn.UseVisualStyleBackColor = true;
+            CreatingAccountbtn.Click += CreatingAccountbtn_Click;
             // 
             // ResultControlcs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(guna2Button1);
+            Controls.Add(CreatingAccountbtn);
             Controls.Add(lbl_FinalResult);
             Controls.Add(label1);
             Name = "ResultControlcs";
@@ -93,6 +83,6 @@
 
         private Label label1;
         private Label lbl_FinalResult;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Button CreatingAccountbtn;
     }
 }

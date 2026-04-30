@@ -9,7 +9,7 @@ namespace NeuPlay
         public AchievementsControl()
         {
             InitializeComponent();
-            // إضافة ألقاب عينة عند فتح الشاشة
+            
             AddBadge("Numbers Hero 🏆", Color.Gold);
             AddBadge("Quick Solver ⚡", Color.SkyBlue);
             AddBadge("New Explorer 🌟", Color.LightGreen);
@@ -26,7 +26,7 @@ namespace NeuPlay
             lblBadge.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblBadge.Margin = new Padding(10);
 
-            // إضافة اللقب داخل الـ FlowLayoutPanel
+            
             flp_Achievements.Controls.Add(lblBadge);
         }
 

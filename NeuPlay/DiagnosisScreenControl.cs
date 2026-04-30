@@ -49,26 +49,22 @@ namespace NeuPlay
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 parent = (Form1)this.FindForm();
-            if (parent != null)
-            {
-                parent.LoadScreen(new ResultControlcs(" "));
-            }
-        }
-        private void btn_FinishTest_Click(object sender, EventArgs e)
+
+        private void groupBox6_Enter(object sender, EventArgs e)
         {
 
+        }
 
-            string testReport = "بناءً على الإجابات، نوصي بالبدء بألعاب مستوى الحروف والأرقام الأساسية.";
+        
 
-            Form1 parentForm = (Form1)this.FindForm();
-            if (parentForm != null)
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+            string testReport = "Your Child is diagnosed by Dysgraphia";
+            Form1 parentform = (Form1)this.FindForm();
+            if (parentform != null)
             {
-
-                parentForm.LoadScreen(new ResultControlcs(testReport));
+                parentform.LoadScreen(new ResultControlcs(testReport));
             }
         }
-        }
+    }
 }

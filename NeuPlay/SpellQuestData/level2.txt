@@ -1,0 +1,6 @@
+cat
+rat
+art
+car
+arc
+act

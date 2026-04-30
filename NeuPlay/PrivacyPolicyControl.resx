@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="rtb_PolicyText.Text" xml:space="preserve">
-    <value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</value>
+    <value>Privacy Policy &amp; Medical Disclaimer
+1. Informational Purposes Only
+The assessments, tests, and results provided by this application are for informational and educational purposes only. They are not intended to be a substitute for professional medical advice, diagnosis, or treatment.
+
+2. Not a Definitive Diagnosis
+While our tests are designed to provide helpful insights based on your answers, they cannot replace a formal evaluation by a qualified healthcare professional. Never disregard professional medical advice or delay in seeking it because of something you have read or your test results on this application.
+
+3. Data Privacy &amp; Security
+We are committed to protecting your personal information. The data and answers you provide during the test are strictly confidential and securely stored. We only use your data to generate your results and improve the accuracy of our system. We do not sell your personal health data to third parties.
+
+4. User Consent
+By proceeding with this test, you acknowledge that you understand the limitations of the results provided and consent to the collection and processing of your data as described in our full Privacy Policy.</value>
   </data>
 </root>

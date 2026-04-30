@@ -9,27 +9,24 @@ namespace NeuPlay
         {
             InitializeComponent();
 
-            Theme.ApplyTheme(this);
         }
 
-        
-        private void btn_Login_Click(object sender, EventArgs e)
+        private void btn_LogIn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_Username.Text) || string.IsNullOrWhiteSpace(txt_Password.Text))
+            if (string.IsNullOrWhiteSpace(Username.Text) || string.IsNullOrWhiteSpace(Password.Text))
             {
-                MessageBox.Show("من فضلك أدخل اسم المستخدم وكلمة المرور", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please,Enter the username and password", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new DashboardControl(txt_Username.Text, 0));
+                parentForm.LoadScreen(new DashboardControl(Username.Text, 0));
             }
         }
 
-        
-        private void btn_GoToRegister_Click(object sender, EventArgs e)
+        private void registringbtn_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)

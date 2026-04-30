@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pnl_MainContent = new Panel();
             SuspendLayout();
             // 
             // pnl_MainContent
             // 
+            pnl_MainContent.BackColor = Color.FromArgb(249, 235, 249);
             pnl_MainContent.Dock = DockStyle.Fill;
             pnl_MainContent.Location = new Point(0, 0);
             pnl_MainContent.Name = "pnl_MainContent";
@@ -51,6 +53,9 @@
             Cursor = Cursors.Hand;
             Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = Color.Indigo;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NeuPlay";

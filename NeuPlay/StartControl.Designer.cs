@@ -28,29 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartControl));
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            startingbtn = new RoundedButton();
             SuspendLayout();
             // 
-            // guna2Button1
+            // startingbtn
             // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(410, 567);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(202, 60);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Start";
-            guna2Button1.Click += button1_Click;
+            startingbtn.BackColor = Color.FromArgb(155, 111, 255);
+            startingbtn.BorderRadius = 20;
+            startingbtn.FlatAppearance.BorderSize = 0;
+            startingbtn.FlatStyle = FlatStyle.Flat;
+            startingbtn.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            startingbtn.ForeColor = Color.White;
+            startingbtn.Location = new Point(432, 496);
+            startingbtn.Name = "startingbtn";
+            startingbtn.Size = new Size(158, 61);
+            startingbtn.TabIndex = 1;
+            startingbtn.Text = "Start";
+            startingbtn.UseVisualStyleBackColor = false;
+            startingbtn.Click += startingbtn_Click;
             // 
             // StartControl
             // 
@@ -58,14 +54,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
-            Controls.Add(guna2Button1);
+            Controls.Add(startingbtn);
             Name = "StartControl";
             Size = new Size(1024, 720);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private RoundedButton startingbtn;
     }
 }

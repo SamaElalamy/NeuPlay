@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NumbersLand));
             label4 = new Label();
             btn_Start = new Button();
             BACK = new Button();
@@ -47,7 +48,7 @@
             // 
             // btn_Start
             // 
-            btn_Start.BackgroundImage = Properties.Resources.Gemini_Generated_Image_ipsp0wipsp0wipsp;
+            btn_Start.BackgroundImage = (Image)resources.GetObject("btn_Start.BackgroundImage");
             btn_Start.BackgroundImageLayout = ImageLayout.Zoom;
             btn_Start.FlatAppearance.BorderSize = 0;
             btn_Start.FlatStyle = FlatStyle.Flat;

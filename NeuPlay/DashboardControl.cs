@@ -35,21 +35,6 @@ namespace NeuPlay
             }
         }
 
-        private void lbl_Welcome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_Badge_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_Level_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Achievements_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
@@ -73,12 +58,30 @@ namespace NeuPlay
         public DashboardControl()
         {
             InitializeComponent();
-
-            Theme.ApplyTheme(this);
             lbl_Welcome.Text = "Hello, Hero !";
             lbl_Score.Text = "Score: 0";
             lbl_Level.Text = "Level: 1";
             lbl_Badge.Text = "New Explorer";
+        }
+
+        private void btn_Play_Click_1(object sender, EventArgs e)
+        {
+            Form1 parentForm = (Form1)this.FindForm();
+            if (parentForm != null)
+            {
+
+                parentForm.LoadScreen(new ServicesScreenControl());
+            }
+        }
+
+        private void lbl_Welcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Score_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

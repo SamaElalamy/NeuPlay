@@ -34,11 +34,12 @@
             btn_HeroRest = new Button();
             label2 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            backbtn = new Button();
             SuspendLayout();
             // 
             // btn_SpellQuest
             // 
-            btn_SpellQuest.BackgroundImage = Properties.Resources.ChatGPT_Image_Apr_22__2026__08_48_33_PM;
+            btn_SpellQuest.BackgroundImage = (Image)resources.GetObject("btn_SpellQuest.BackgroundImage");
             btn_SpellQuest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_SpellQuest.FlatAppearance.BorderSize = 0;
             btn_SpellQuest.FlatStyle = FlatStyle.Flat;
@@ -77,8 +78,10 @@
             // 
             // label2
             // 
+            label2.BackColor = Color.FromArgb(155, 111, 255);
             label2.Dock = DockStyle.Top;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            label2.Font = new Font("Arial Rounded MT Bold", 48F);
+            label2.ForeColor = Color.WhiteSmoke;
             label2.ImageAlign = ContentAlignment.TopCenter;
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
@@ -97,11 +100,25 @@
             flowLayoutPanel1.Size = new Size(0, 0);
             flowLayoutPanel1.TabIndex = 5;
             // 
+            // backbtn
+            // 
+            backbtn.BackColor = Color.FromArgb(155, 111, 255);
+            backbtn.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backbtn.ForeColor = Color.Cornsilk;
+            backbtn.Location = new Point(24, 616);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(80, 37);
+            backbtn.TabIndex = 6;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = false;
+            backbtn.Click += backbtn_Click;
+            // 
             // ServicesScreenControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(249, 235, 249);
+            BackColor = Color.FromArgb(255, 227, 151);
+            Controls.Add(backbtn);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label2);
             Controls.Add(btn_HeroRest);
@@ -119,5 +136,6 @@
         private Button btn_HeroRest;
         private Label label2;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button backbtn;
     }
 }

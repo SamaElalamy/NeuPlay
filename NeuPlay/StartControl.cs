@@ -19,14 +19,13 @@ namespace NeuPlay
             Theme.ApplyTheme(this);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void startingbtn_Click(object sender, EventArgs e)
         {
             Form1 parent = (Form1)this.FindForm();
             if (parent != null)
             {
                 parent.LoadScreen(new PrivacyPolicyControl());
             }
-
         }
     }
 }

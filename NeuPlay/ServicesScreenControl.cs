@@ -44,7 +44,7 @@ namespace NeuPlay
 
         private void btn_HeroRest_Click(object sender, EventArgs e)
         {
-            
+
             MessageBox.Show("Welcome to Hero's Rest! Stories and tips coming soon.", "NeuPlay");
         }
 
@@ -71,6 +71,16 @@ namespace NeuPlay
             {
 
                 parentForm.LoadScreen(new SpellQuest());
+            }
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            Form1 parentForm = (Form1)this.FindForm();
+            if (parentForm != null)
+            {
+
+                parentForm.LoadScreen(new DashboardControl());
             }
         }
     }

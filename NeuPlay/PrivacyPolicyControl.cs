@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace NeuPlay
 {
@@ -14,27 +15,26 @@ namespace NeuPlay
 
         private void chk_Agree_CheckedChanged(object sender, EventArgs e)
         {
-            button_continue.Enabled = chk_Agree.Checked;
-        }
-
-
-        private void button_Continue_Click(object sender, EventArgs e)
-        {
-            Form1 parentForm = (Form1)this.FindForm();
-            if (parentForm != null)
+            continuebtn.Enabled = chk_Agree.Checked;
+            if (chk_Agree.Checked)
             {
-                parentForm.LoadScreen(new DiagnosisScreenControl());
+                continuebtn.Enabled = true;
+                continuebtn.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                continuebtn.Enabled = false;
+                continuebtn.Cursor = Cursors.Default;
             }
         }
 
-        private void button_continue_Click_1(object sender, EventArgs e)
+        private void continuebtn_Click_1(object sender, EventArgs e)
         {
             Form1 parent = (Form1)this.FindForm();
             if (parent != null)
             {
                 parent.LoadScreen(new DiagnosisScreenControl());
             }
-
         }
     }
 }

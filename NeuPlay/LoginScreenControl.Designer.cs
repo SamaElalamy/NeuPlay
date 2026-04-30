@@ -28,156 +28,151 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label1 = new Label();
-            label2 = new Label();
             label4 = new Label();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            txt_Username = new Guna.UI2.WinForms.Guna2TextBox();
-            txt_Password = new Guna.UI2.WinForms.Guna2TextBox();
+            Username = new TextBox();
+            Password = new TextBox();
+            label1 = new Label();
+            label3 = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            registringbtn = new RoundedButton();
+            btn_LogIn = new RoundedButton();
+            flowLayoutPanel1.SuspendLayout();
+            flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.FromArgb(106, 36, 138);
+            label4.Dock = DockStyle.Top;
+            label4.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(249, 235, 249);
+            label4.ImageAlign = ContentAlignment.TopCenter;
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(1024, 72);
+            label4.TabIndex = 9;
+            label4.Text = "Log in:";
+            // 
+            // Username
+            // 
+            Username.BackColor = Color.FromArgb(249, 235, 249);
+            Username.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            Username.ForeColor = Color.FromArgb(21, 12, 126);
+            Username.Location = new Point(198, 3);
+            Username.Name = "Username";
+            Username.Size = new Size(234, 39);
+            Username.TabIndex = 19;
+            // 
+            // Password
+            // 
+            Password.BackColor = Color.FromArgb(249, 235, 249);
+            Password.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            Password.ForeColor = Color.FromArgb(21, 12, 126);
+            Password.Location = new Point(189, 3);
+            Password.Name = "Password";
+            Password.PasswordChar = '*';
+            Password.Size = new Size(227, 39);
+            Password.TabIndex = 22;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(56, 96);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(78, 20);
-            label1.TabIndex = 4;
-            label1.Text = "UserName";
+            label1.Size = new Size(189, 46);
+            label1.TabIndex = 23;
+            label1.Text = "Username:";
             // 
-            // label2
+            // label3
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(64, 160);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 20);
-            label2.TabIndex = 5;
-            label2.Text = "Password";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label3.Location = new Point(3, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(180, 46);
+            label3.TabIndex = 24;
+            label3.Text = "Password:";
             // 
-            // label4
+            // flowLayoutPanel1
             // 
-            label4.Dock = DockStyle.Top;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label4.ImageAlign = ContentAlignment.TopCenter;
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(1024, 48);
-            label4.TabIndex = 9;
-            label4.Text = "Log in";
+            flowLayoutPanel1.Controls.Add(label1);
+            flowLayoutPanel1.Controls.Add(Username);
+            flowLayoutPanel1.Location = new Point(40, 120);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(440, 64);
+            flowLayoutPanel1.TabIndex = 25;
             // 
-            // guna2Button1
+            // flowLayoutPanel2
             // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(116, 456);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(140, 53);
-            guna2Button1.TabIndex = 10;
-            guna2Button1.Text = "Log in";
-            guna2Button1.Click += btn_Login_Click;
+            flowLayoutPanel2.Controls.Add(label3);
+            flowLayoutPanel2.Controls.Add(Password);
+            flowLayoutPanel2.Location = new Point(40, 248);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(424, 72);
+            flowLayoutPanel2.TabIndex = 26;
             // 
-            // guna2Button2
+            // registringbtn
             // 
-            guna2Button2.BorderRadius = 15;
-            guna2Button2.CustomizableEdges = customizableEdges11;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(636, 456);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button2.Size = new Size(225, 53);
-            guna2Button2.TabIndex = 11;
-            guna2Button2.Text = "Don't have an account? Register Now";
-            guna2Button2.Click += btn_GoToRegister_Click;
+            registringbtn.BackColor = Color.FromArgb(106, 36, 138);
+            registringbtn.BorderRadius = 20;
+            registringbtn.FlatAppearance.BorderSize = 0;
+            registringbtn.FlatStyle = FlatStyle.Flat;
+            registringbtn.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            registringbtn.ForeColor = Color.FromArgb(217, 214, 224);
+            registringbtn.Location = new Point(552, 488);
+            registringbtn.Name = "registringbtn";
+            registringbtn.Size = new Size(296, 61);
+            registringbtn.TabIndex = 28;
+            registringbtn.Text = "Don't have an account? Register Now";
+            registringbtn.UseVisualStyleBackColor = false;
+            registringbtn.Click += registringbtn_Click;
             // 
-            // txt_Username
+            // btn_LogIn
             // 
-            txt_Username.BorderColor = Color.LightGray;
-            txt_Username.BorderRadius = 15;
-            txt_Username.CustomizableEdges = customizableEdges13;
-            txt_Username.DefaultText = "";
-            txt_Username.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_Username.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_Username.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_Username.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_Username.FocusedState.BorderColor = Color.DodgerBlue;
-            txt_Username.Font = new Font("Segoe UI", 9F);
-            txt_Username.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Username.Location = new Point(144, 96);
-            txt_Username.Margin = new Padding(3, 4, 3, 4);
-            txt_Username.Name = "txt_Username";
-            txt_Username.PlaceholderText = "";
-            txt_Username.SelectedText = "";
-            txt_Username.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txt_Username.Size = new Size(125, 27);
-            txt_Username.TabIndex = 12;
-            // 
-            // txt_Password
-            // 
-            txt_Password.BorderColor = Color.LightGray;
-            txt_Password.BorderRadius = 15;
-            txt_Password.CustomizableEdges = customizableEdges15;
-            txt_Password.DefaultText = "";
-            txt_Password.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_Password.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_Password.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_Password.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_Password.FocusedState.BorderColor = Color.DodgerBlue;
-            txt_Password.Font = new Font("Segoe UI", 9F);
-            txt_Password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Password.Location = new Point(144, 153);
-            txt_Password.Margin = new Padding(3, 4, 3, 4);
-            txt_Password.Name = "txt_Password";
-            txt_Password.PlaceholderText = "";
-            txt_Password.SelectedText = "";
-            txt_Password.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txt_Password.Size = new Size(125, 27);
-            txt_Password.TabIndex = 13;
+            btn_LogIn.BackColor = Color.FromArgb(106, 36, 138);
+            btn_LogIn.BorderRadius = 20;
+            btn_LogIn.FlatAppearance.BorderSize = 0;
+            btn_LogIn.FlatStyle = FlatStyle.Flat;
+            btn_LogIn.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_LogIn.ForeColor = Color.FromArgb(217, 214, 224);
+            btn_LogIn.Location = new Point(160, 488);
+            btn_LogIn.Name = "btn_LogIn";
+            btn_LogIn.Size = new Size(144, 61);
+            btn_LogIn.TabIndex = 27;
+            btn_LogIn.Text = "Log in";
+            btn_LogIn.UseVisualStyleBackColor = false;
+            btn_LogIn.Click += btn_LogIn_Click;
             // 
             // LoginScreenControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(txt_Password);
-            Controls.Add(txt_Username);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
+            BackColor = Color.FromArgb(249, 235, 249);
+            Controls.Add(registringbtn);
+            Controls.Add(btn_LogIn);
+            Controls.Add(flowLayoutPanel2);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(label4);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "LoginScreenControl";
             Size = new Size(1024, 720);
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
+            flowLayoutPanel2.ResumeLayout(false);
+            flowLayoutPanel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label label1;
-        private Label label2;
         private Label label4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Username;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Password;
+        private TextBox Username;
+        private TextBox Password;
+        private Label label1;
+        private Label label3;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private RoundedButton registringbtn;
+        private RoundedButton btn_LogIn;
     }
 }

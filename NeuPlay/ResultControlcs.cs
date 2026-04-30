@@ -21,7 +21,7 @@ namespace NeuPlay
 
         }
 
-        private void btn_GoToLogin_Click_1(object sender, EventArgs e)
+        private void CreatingAccountbtn_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
