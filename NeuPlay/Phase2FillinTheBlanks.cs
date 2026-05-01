@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace NeuPlay
 {
-    //AI is used
+    
     public partial class Phase2FillinTheBlanks : UserControl
     {
         private SpellQuestLevels gameManager = new SpellQuestLevels();
@@ -18,19 +18,21 @@ namespace NeuPlay
 
         private void Phase2FillinTheBlanks_Load(object sender, EventArgs e)
         {
-            string path = Application.StartupPath + "\\SpellQuestData\\level2.txt";
-            progressBar1.Maximum = gameManager.NumberOfWord;
-            progressBar1.Value = 0;
+            string path = Application.StartupPath + "\\SpellQuestData\\level4.txt";
+
             try
             {
                 if (gameManager.StartLevel(path))
                 {
+                    progressBar1.Maximum = gameManager.NumberOfWord;
+                    progressBar1.Value = 0;
+
                     UpdateScreen();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Unable to load file!"+ex.Message);
+                MessageBox.Show("Unable to load file!" + ex.Message);
             }
         }
 
@@ -46,10 +48,10 @@ namespace NeuPlay
                 }
                 return;
             }
-            ScoreLabel.Text=(gameManager.CurrentIndex+1).ToString()+"/"+gameManager.NumberOfWord.ToString();
-            if (gameManager.NumberOfWord <= progressBar1.Maximum)
+            ScoreLabel.Text = (gameManager.CurrentIndex + 1).ToString() + "/" + gameManager.NumberOfWord.ToString();
+            if (gameManager.CurrentIndex <= progressBar1.Maximum)
             {
-                progressBar1.Value = gameManager.NumberOfWord;
+                progressBar1.Value = gameManager.CurrentIndex;
             }
 
             WordItem current = gameManager.GetCurrentWord();
@@ -58,18 +60,18 @@ namespace NeuPlay
 
             SetupButtons(current.MissingLetter);
         }
-        
+
         private void DrawWordBoxes(WordItem current)
         {
-            flowLayoutPanel1.Controls.Clear(); 
+            flowLayoutPanel1.Controls.Clear();
             bool isBlankDrawn = false;
 
             foreach (char c in current.OriginalWord)
             {
                 Label lbl = new Label();
                 lbl.AutoSize = false;
-                lbl.Size = new Size(80, 80); 
-                lbl.BackColor = ColorTranslator.FromHtml("#150c7e");
+                lbl.Size = new Size(80, 80);
+                lbl.BackColor = ColorTranslator.FromHtml("#b79af8");
                 lbl.ForeColor = ColorTranslator.FromHtml("#ffd35b");
                 lbl.BorderStyle = BorderStyle.FixedSingle;
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -78,25 +80,25 @@ namespace NeuPlay
 
                 if (Char.ToUpper(c) == Char.ToUpper(current.MissingLetter) && !isBlankDrawn)
                 {
-                    lbl.Text = "....."; 
+                    lbl.Text = ".....";
                     lbl.ForeColor = Color.White;
                     isBlankDrawn = true;
 
                 }
                 else
                 {
-                    lbl.Text = c.ToString().ToUpper(); 
+                    lbl.Text = c.ToString().ToUpper();
                     lbl.ForeColor = Color.Black;
                 }
 
-                flowLayoutPanel1.Controls.Add(lbl); 
+                flowLayoutPanel1.Controls.Add(lbl);
             }
         }
         private void SetupButtons(char correctLetter)
         {
             Button[] btns = { btn_Choice1, btn_Choice2, btn_Choice3, btn_Choice4 };
             Random rand = new Random();
-            int correctIndex = rand.Next(0, 4); 
+            int correctIndex = rand.Next(0, 4);
 
             for (int i = 0; i < 4; i++)
             {
@@ -107,7 +109,7 @@ namespace NeuPlay
                 }
                 else
                 {
-                    
+
                     char randomLetter;
                     do
                     {
@@ -117,13 +119,13 @@ namespace NeuPlay
                     btns[i].Text = randomLetter.ToString();
                 }
 
-                
+
                 btns[i].Click -= ChoiceButton_Click;
                 btns[i].Click += ChoiceButton_Click;
             }
         }
 
-        
+
         private void ChoiceButton_Click(object sender, EventArgs e)
         {
             Button clickedBtn = (Button)sender;
@@ -131,9 +133,9 @@ namespace NeuPlay
 
             if (gameManager.CheckAnswer(childAnswer))
             {
-                
+
                 UpdateScreen();
-                
+
             }
             else
             {
@@ -148,6 +150,11 @@ namespace NeuPlay
             {
                 parent.LoadScreen(new Phase3DragAndDrop());
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -202,6 +202,7 @@
             flowLayoutPanel5.Size = new Size(984, 56);
             flowLayoutPanel5.TabIndex = 15;
             // 
+            // 
             // DashboardControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);

@@ -33,7 +33,7 @@ namespace NeuPlay
             Form1 parent = (Form1)this.FindForm();
             if (parent != null)
             {
-                parent.LoadScreen(new DiagnosisScreenControl());
+                parent.LoadScreen(new TestChoice());
             }
         }
     }

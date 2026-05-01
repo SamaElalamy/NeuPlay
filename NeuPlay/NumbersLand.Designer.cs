@@ -60,6 +60,22 @@
             btn_Start.Click += btn_Start_Click;
           
             // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 15;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(12, 638);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.Size = new Size(123, 41);
+            guna2Button1.TabIndex = 12;
+            guna2Button1.Text = "Back";
+            guna2Button1.Click += btn_Back_Click;
+            // 
             // NumbersLand
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);

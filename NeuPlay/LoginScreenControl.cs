@@ -10,7 +10,6 @@ namespace NeuPlay
             InitializeComponent();
 
         }
-
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Username.Text) || string.IsNullOrWhiteSpace(Password.Text))
@@ -18,7 +17,6 @@ namespace NeuPlay
                 MessageBox.Show("Please,Enter the username and password", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {

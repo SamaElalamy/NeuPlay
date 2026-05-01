@@ -44,11 +44,12 @@
             // 
             flowLayoutPanel1.BackColor = Color.FromArgb(106, 36, 138);
             flowLayoutPanel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            flowLayoutPanel1.ForeColor = Color.FromArgb(21, 12, 126);
+            flowLayoutPanel1.ForeColor = Color.FromArgb(183, 154, 248);
             flowLayoutPanel1.Location = new Point(104, 264);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(800, 181);
             flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // btn_Choice1
             // 

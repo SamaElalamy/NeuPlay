@@ -43,7 +43,7 @@ namespace NeuPlay
             if (currentContent != null && currentContent.CurrentIndex < currentContent.ImagePaths.Count - 1)
             {
                 currentContent.CurrentIndex++;
-                displaypic.Image = Image.FromFile(currentContent.ImagePaths[currentContent.CurrentIndex]); // اعرض الصورة الجديدة
+                displaypic.Image = Image.FromFile(currentContent.ImagePaths[currentContent.CurrentIndex]); 
             }
             else
             {

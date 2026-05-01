@@ -38,28 +38,31 @@
             // 
             // label1
             // 
+            label1.BackColor = Color.FromArgb(106, 36, 138);
             label1.Dock = DockStyle.Top;
             label1.Font = new Font("Arial Rounded MT Bold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(249, 235, 249);
             label1.ImageAlign = ContentAlignment.MiddleLeft;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1024, 56);
+            label1.Size = new Size(1024, 120);
             label1.TabIndex = 3;
-            label1.Text = "Diagnose Test\r\n";
+            label1.Text = "Choose your Test:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // roundedButton1
             // 
-            roundedButton1.BackColor = Color.MediumSlateBlue;
+            roundedButton1.BackColor = Color.FromArgb(183, 154, 248);
             roundedButton1.BorderRadius = 20;
             roundedButton1.FlatAppearance.BorderSize = 0;
             roundedButton1.FlatStyle = FlatStyle.Flat;
+            roundedButton1.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Bold);
             roundedButton1.ForeColor = Color.White;
             roundedButton1.Location = new Point(3, 3);
             roundedButton1.Name = "roundedButton1";
             roundedButton1.Size = new Size(269, 325);
             roundedButton1.TabIndex = 4;
-            roundedButton1.Text = "roundedButton1";
+            roundedButton1.Text = "Dysgraphia";
             roundedButton1.UseVisualStyleBackColor = false;
             roundedButton1.Click += roundedButton1_Click;
             // 
@@ -75,38 +78,44 @@
             // 
             // roundedButton2
             // 
-            roundedButton2.BackColor = Color.MediumSlateBlue;
+            roundedButton2.BackColor = Color.FromArgb(183, 154, 248);
             roundedButton2.BorderRadius = 20;
             roundedButton2.FlatAppearance.BorderSize = 0;
             roundedButton2.FlatStyle = FlatStyle.Flat;
+            roundedButton2.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Bold);
             roundedButton2.ForeColor = Color.White;
             roundedButton2.Location = new Point(278, 3);
             roundedButton2.Name = "roundedButton2";
             roundedButton2.Size = new Size(269, 325);
             roundedButton2.TabIndex = 5;
-            roundedButton2.Text = "roundedButton2";
+            roundedButton2.Text = "Dyscalculia";
             roundedButton2.UseVisualStyleBackColor = false;
+            roundedButton2.Click += roundedButton2_Click;
             // 
             // roundedButton3
             // 
-            roundedButton3.BackColor = Color.MediumSlateBlue;
+            roundedButton3.BackColor = Color.FromArgb(183, 154, 248);
             roundedButton3.BorderRadius = 20;
             roundedButton3.FlatAppearance.BorderSize = 0;
             roundedButton3.FlatStyle = FlatStyle.Flat;
+            roundedButton3.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Bold);
             roundedButton3.ForeColor = Color.White;
             roundedButton3.Location = new Point(553, 3);
             roundedButton3.Name = "roundedButton3";
             roundedButton3.Size = new Size(269, 325);
             roundedButton3.TabIndex = 6;
-            roundedButton3.Text = "roundedButton3";
+            roundedButton3.Text = "Both";
             roundedButton3.UseVisualStyleBackColor = false;
+            roundedButton3.Click += roundedButton3_Click;
             // 
             // TestChoice
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(249, 235, 249);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
+            ForeColor = Color.FromArgb(249, 235, 249);
             Name = "TestChoice";
             Size = new Size(1024, 720);
             flowLayoutPanel1.ResumeLayout(false);

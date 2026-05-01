@@ -42,7 +42,13 @@ namespace NeuPlay
                 string path = Application.StartupPath + "\\SpellQuestData\\level2.txt";
                 if (gameManager.StartLevel(path))
                 {
-                    UpdateScreen();
+                    if (gameManager.StartLevel(path))
+                    {
+                        progressBar1.Maximum = gameManager.NumberOfWord;
+                        progressBar1.Value = 0;
+                        UpdateScreen();
+                    }
+                    
                 }
             }
             catch(Exception ex)
@@ -60,6 +66,11 @@ namespace NeuPlay
             {
                 PopUpManager.ShowMessage(true);
                 MessageBox.Show($"Congratulations! your total score is: {gameManager.Score}");
+                ScoreLabel.Text = (gameManager.CurrentIndex + 1).ToString() + "/" + gameManager.NumberOfWord.ToString();
+                if (gameManager.CurrentIndex <= progressBar1.Maximum)
+                {
+                    progressBar1.Value = gameManager.CurrentIndex;
+                }
                 return;
             }
 
@@ -174,9 +185,9 @@ namespace NeuPlay
                         return;
                     }
                     ScoreLabel.Text = (gameManager.CurrentIndex + 1).ToString() + "/" + gameManager.NumberOfWord.ToString();
-                    if (gameManager.NumberOfWord <= progressBar1.Maximum)
+                    if (gameManager.CurrentIndex <= progressBar1.Maximum)
                     {
-                        progressBar1.Value = gameManager.NumberOfWord;
+                        progressBar1.Value = gameManager.CurrentIndex;
                     }
                     UpdateScreen();
                 }

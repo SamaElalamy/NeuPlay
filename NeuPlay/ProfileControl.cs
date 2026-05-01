@@ -16,16 +16,17 @@ namespace NeuPlay
         {
             // بيانات افتراضية، تقدر تربطها بقاعدة البيانات لاحقاً
             txt_Name.Text = "Sama";
-            txt_Age.Text = "19";
+            txt_Age.Text = "5";
             txt_Password.Text = "Sama123456"; // هيظهر كنجوم وغير قابل للتعديل
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
+
+        private void roundedButton1_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-            
+
                 parentForm.LoadScreen(new DashboardControl());
             }
         }

@@ -35,8 +35,10 @@
             // 
             // label1
             // 
+            label1.BackColor = Color.FromArgb(155, 111, 255);
             label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(249, 235, 249);
             label1.ImageAlign = ContentAlignment.TopCenter;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
@@ -50,27 +52,31 @@
             lbl_FinalResult.BackColor = SystemColors.ButtonHighlight;
             lbl_FinalResult.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lbl_FinalResult.ImageAlign = ContentAlignment.TopCenter;
-            lbl_FinalResult.Location = new Point(32, 152);
+            lbl_FinalResult.Location = new Point(296, 160);
             lbl_FinalResult.Name = "lbl_FinalResult";
-            lbl_FinalResult.Size = new Size(928, 48);
+            lbl_FinalResult.Size = new Size(400, 96);
             lbl_FinalResult.TabIndex = 4;
             lbl_FinalResult.Text = "Result Of The Test";
             lbl_FinalResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CreatingAccountbtn
             // 
-            CreatingAccountbtn.Location = new Point(424, 424);
+            CreatingAccountbtn.BackColor = Color.FromArgb(155, 111, 255);
+            CreatingAccountbtn.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CreatingAccountbtn.ForeColor = Color.FromArgb(249, 235, 249);
+            CreatingAccountbtn.Location = new Point(368, 360);
             CreatingAccountbtn.Name = "CreatingAccountbtn";
-            CreatingAccountbtn.Size = new Size(152, 45);
+            CreatingAccountbtn.Size = new Size(256, 61);
             CreatingAccountbtn.TabIndex = 5;
             CreatingAccountbtn.Text = "create an account";
-            CreatingAccountbtn.UseVisualStyleBackColor = true;
+            CreatingAccountbtn.UseVisualStyleBackColor = false;
             CreatingAccountbtn.Click += CreatingAccountbtn_Click;
             // 
             // ResultControlcs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(249, 235, 249);
             Controls.Add(CreatingAccountbtn);
             Controls.Add(lbl_FinalResult);
             Controls.Add(label1);

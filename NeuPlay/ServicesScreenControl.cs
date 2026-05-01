@@ -8,44 +8,32 @@ namespace NeuPlay
         public ServicesScreenControl()
         {
             InitializeComponent();
-            Theme.ApplyTheme(this);
         }
-
-
         public ServicesScreenControl(string diagnosis)
         {
             InitializeComponent();
-
-
             btn_SpellQuest.Visible = false;
             btn_NumbersLand.Visible = false;
             btn_HeroRest.Visible = true;
-
-
             if (diagnosis == "Dysgraphia" || diagnosis == "Both")
             {
                 btn_SpellQuest.Visible = true;
             }
-
             if (diagnosis == "Dyscalculia" || diagnosis == "Both")
             {
                 btn_NumbersLand.Visible = true;
             }
         }
-
         private void btn_NumbersLand_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-
                 parentForm.LoadScreen(new NumbersLand());
             }
         }
-
         private void btn_HeroRest_Click(object sender, EventArgs e)
         {
-
             MessageBox.Show("Welcome to Hero's Rest! Stories and tips coming soon.", "NeuPlay");
         }
 

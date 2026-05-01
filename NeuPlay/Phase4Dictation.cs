@@ -17,16 +17,19 @@ namespace NeuPlay
 
         private void Phase4Dictation_Load(object sender, EventArgs e)
         {
-            
             string path = Application.StartupPath + "\\SpellQuestData\\level5.txt";
 
             if (gameManager.StartLevel(path))
             {
+                
+                progressBar1.Maximum = gameManager.NumberOfWord;
+                progressBar1.Value = 0;
+
                 UpdateScreen();
             }
             else
             {
-                MessageBox.Show("مش قادرين نحمل ملف الكلمات!");
+                MessageBox.Show("File is not available!");
             }
         }
 
@@ -35,6 +38,11 @@ namespace NeuPlay
             if (gameManager.IsLevelComplete())
             {
                 MessageBox.Show($"عاش يا بطل! خلصت المستوى والسكور بتاعك: {gameManager.Score}");
+                ScoreLabel.Text = (gameManager.CurrentIndex + 1).ToString() + "/" + gameManager.NumberOfWord.ToString();
+                if (gameManager.CurrentIndex <= progressBar1.Maximum)
+                {
+                    progressBar1.Value = gameManager.CurrentIndex;
+                }
                 return;
             }
 
@@ -51,46 +59,54 @@ namespace NeuPlay
             }
             catch { }
 
-            // 2. تفريغ مربع النص عشان الطفل يكتب الكلمة الجديدة
+            
             InputWordtxtbox.Text = "";
             InputWordtxtbox.Focus();
 
         }
-        // بنخلي مؤشر الكتابة يقف جوه المربع أوتوماتيك عشان الطفل ميتعبش
+        
 
 
-        // كود زرار Check (اربطيه بحدث الـ Click للزرار الأزرق عندك)
+        
         private void Checkbtn_Click(object sender, EventArgs e)
         {
-            // بناخد الكلمة اللي الطفل كتبها ونشيل أي مسافات زيادة
             string childAnswer = InputWordtxtbox.Text.Trim();
 
-            // بنقارن إجابة الطفل بالكلمة الأصلية (OriginalWord) 
-            // واستخدمنا IgnoreCase عشان لو الطفل كتب كابيتال أو سمول تطلعله صح
             if (childAnswer.Equals(currentWord.OriginalWord, StringComparison.OrdinalIgnoreCase))
             {
                 PopUpManager.ShowMessage(true);
+
                 gameManager.CheckAnswer(currentWord.MissingLetter);
+
                 if (gameManager.CurrentIndex >= gameManager.NumberOfWord)
                 {
                     Form1 parent = (Form1)this.FindForm();
                     if (parent != null)
                     {
+                        
                         parent.LoadScreen(new ServicesScreenControl());
                     }
                     return;
                 }
+
+                
                 ScoreLabel.Text = (gameManager.CurrentIndex + 1).ToString() + "/" + gameManager.NumberOfWord.ToString();
-                // الخدعة: بنبعت للمدير الحرف الناقص بتاع الكلمة دي عشان يزود السكور وينقلنا عاللي بعدها
+
+                if (gameManager.CurrentIndex <= progressBar1.Maximum)
+                {
+                    progressBar1.Value = gameManager.CurrentIndex;
+                }
+
                 UpdateScreen();
             }
             else
             {
                 PopUpManager.ShowMessage(false);
-                InputWordtxtbox.Text = ""; // بنفضي المربع عشان يكتب من الأول
+                InputWordtxtbox.Text = ""; 
                 InputWordtxtbox.Focus();
             }
         }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
