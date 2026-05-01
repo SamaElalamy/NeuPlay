@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbl_Operator = new Label();
             btn_Greater = new Button();
             btn_Equal = new Button();
             btn_Less = new Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             textBox1 = new TextBox();
             progressBar1 = new ProgressBar();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -85,24 +83,6 @@
             btn_Less.UseVisualStyleBackColor = true;
             btn_Less.Click += btn_Less_Click;
             // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(912, 16);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(94, 29);
-            guna2Button1.TabIndex = 7;
-            guna2Button1.Text = "Back";
-            guna2Button1.Click += btn_Back_Click;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
@@ -126,7 +106,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.LightSteelBlue;
+            textBox1.BackColor = Color.LemonChiffon;
             textBox1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.Navy;
             textBox1.Location = new Point(13, 3);
@@ -144,15 +124,28 @@
             progressBar1.TabIndex = 11;
             progressBar1.Click += progressBar1_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.LightYellow;
+            button1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Purple;
+            button1.Location = new Point(910, 13);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 12;
+            button1.Text = "back";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += btn_Back_Click;
+            // 
             // CompareLevelControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(progressBar1);
             Controls.Add(textBox1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(guna2Button1);
             Controls.Add(btn_Less);
             Controls.Add(btn_Equal);
             Controls.Add(btn_Greater);
@@ -170,10 +163,10 @@
         private Button btn_Greater;
         private Button btn_Equal;
         private Button btn_Less;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private TextBox textBox1;
         private ProgressBar progressBar1;
+        private Button button1;
     }
 }

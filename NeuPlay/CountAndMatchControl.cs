@@ -9,11 +9,11 @@ namespace NeuPlay
     {
         int currentNumber = 1; //هيبدا من 1 ل 10
         Random rnd = new Random();
-
+        Score score = new Score();
         public CountAndMatchControl()
         {
             InitializeComponent();
-            GenerateQuestion(); 
+            GenerateQuestion();
             Theme.ApplyTheme(this);
         }
 
@@ -51,17 +51,17 @@ namespace NeuPlay
             choices = choices.OrderBy(x => rnd.Next()).ToList();
 
             // نحط الأرقام على الزراير
-            btn_Num1.Text = choices[0].ToString();
-            btn_Num2.Text = choices[1].ToString();
-            btn_Num3.Text = choices[2].ToString();
-            btn_Num4.Text = choices[3].ToString();
+            button1.Text = choices[0].ToString();
+            button2.Text = choices[1].ToString();
+            button3.Text = choices[2].ToString();
+            button4.Text = choices[3].ToString();
         }
 
         private void CheckAnswer(int selectedNum)
         {
             if (selectedNum == currentNumber)
             {
-                if(currentNumber < 10)
+                if (currentNumber < 10)
                 {
                     MessageBox.Show("إجابة صحيحة! برافو 🌟", "ممتاز", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     currentNumber++;
@@ -70,6 +70,9 @@ namespace NeuPlay
                 else
                 {
                     MessageBox.Show("مبروك! تعلمت الأرقام من 1 لـ 10 بنجاح 🏆", "بطل الأرقام");
+
+                    score.AddPoints("CountLevel"); //استدعاء داله الاسكور
+                    MessageBox.Show("نقاطك: " + Score.points,"برافو🎉");
 
                     Form1 parentForm = (Form1)this.FindForm();
                     if (parentForm != null) parentForm.LoadScreen(new CollectLevelControl());
@@ -81,13 +84,13 @@ namespace NeuPlay
             }
         }
 
-        
-        private void btn_Num1_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(btn_Num1.Text)); }
-        private void btn_Num2_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(btn_Num2.Text)); }
-        private void btn_Num3_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(btn_Num3.Text)); }
-        private void btn_Num4_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(btn_Num4.Text)); }
 
-        
+        private void btn_Num1_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(button1.Text)); }
+        private void btn_Num2_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(button2.Text)); }
+        private void btn_Num3_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(button3.Text)); }
+        private void btn_Num4_Click(object sender, EventArgs e) { CheckAnswer(int.Parse(button4.Text)); }
+
+
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();

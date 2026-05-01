@@ -21,42 +21,6 @@ namespace NeuPlay
         {
             screen.BackColor = Palette.Background;
 
-            foreach (Control c in screen.Controls)
-            {
-                //خانات التيكست(Guna2)
-                if (c is Guna2TextBox txt)
-                {
-                    txt.BorderRadius = 15;
-                    txt.BorderColor = Color.LightGray;
-                    txt.FocusedState.BorderColor = Palette.PrimaryBlue;
-                    txt.FillColor = Color.White;
-                    txt.ForeColor = Color.Black;
-                    txt.Font = new Font("Segoe UI", 12);
-                }
-
-                //الازرار(Guna2)
-                if (c is Guna2Button button)
-                {
-                    button.FillColor = Palette.PrimaryBlue;
-                    button.ForeColor = Color.White;
-                    button.BorderRadius = 15;
-                    button.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                }
-
-                //دي للقائمه زي بتاعت العمر
-                if(c is Guna2ComboBox combo)
-                {
-                    combo.BorderRadius = 10;
-                    combo.FocusedState.BorderColor= Palette.PrimaryBlue;
-                }
-
-                if (c.HasChildren)
-                {
-                    ApplyTheme(c);
-                }
-
-            }
-
         }
     }
 

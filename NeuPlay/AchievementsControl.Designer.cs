@@ -80,7 +80,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(flp_Achievements);
             Controls.Add(label5);
-            Controls.Add(btnback);
             ForeColor = Color.FromArgb(249, 235, 249);
             Name = "AchievementsControl";
             Size = new Size(1024, 720);

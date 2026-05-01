@@ -9,6 +9,7 @@ namespace NeuPlay
         int targetCount; //هيختار من 1 ل 10
         int collectedCount = 0; // العداد اللي بيحسب هو داس على كام نجمة
         Random random = new Random();
+        Score score = new Score();
 
         List<int> list = new List<int>(); // عشان تكرار الارقام
 
@@ -91,6 +92,9 @@ namespace NeuPlay
                     {
                         MessageBox.Show("مبروك يا بطل! أنهيت كل تحديات التجميع 🏆", "فوز ساحق");
 
+                        score.AddPoints("CollectLevel"); //استدعاء داله الاسكور
+                        MessageBox.Show("نقاطك: " + Score.points, "برافو🎉");
+
                         Form1 parentForm = (Form1)this.FindForm();
                         if (parentForm != null)
                         {
@@ -122,7 +126,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new NumbersLand());
+                parentForm.LoadScreen(new CountAndMatchControl());
             }
         }
     }

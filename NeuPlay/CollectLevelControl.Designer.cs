@@ -28,20 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbl_Title = new Label();
             pic_Star1 = new PictureBox();
             pic_Star2 = new PictureBox();
             pic_Star3 = new PictureBox();
             pic_Star4 = new PictureBox();
             pic_Star5 = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             pic_Star8 = new PictureBox();
             pic_Star6 = new PictureBox();
             pic_Star7 = new PictureBox();
             pic_Star9 = new PictureBox();
             pic_Star10 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pic_Star1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_Star2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pic_Star3).BeginInit();
@@ -57,10 +55,10 @@
             // lbl_Title
             // 
             lbl_Title.AutoSize = true;
-            lbl_Title.BackColor = Color.LightSteelBlue;
+            lbl_Title.BackColor = Color.LemonChiffon;
             lbl_Title.Font = new Font("Segoe UI", 18F);
             lbl_Title.ForeColor = Color.Navy;
-            lbl_Title.Location = new Point(69, 21);
+            lbl_Title.Location = new Point(37, 15);
             lbl_Title.Name = "lbl_Title";
             lbl_Title.Size = new Size(202, 41);
             lbl_Title.TabIndex = 0;
@@ -68,10 +66,9 @@
             // 
             // pic_Star1
             // 
-            pic_Star1.Image = Properties.Resources.star;
-            pic_Star1.Location = new Point(295, 567);
+            pic_Star1.Location = new Point(295, 549);
             pic_Star1.Name = "pic_Star1";
-            pic_Star1.Size = new Size(102, 87);
+            pic_Star1.Size = new Size(128, 105);
             pic_Star1.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star1.TabIndex = 1;
             pic_Star1.TabStop = false;
@@ -79,10 +76,9 @@
             // 
             // pic_Star2
             // 
-            pic_Star2.Image = Properties.Resources.star;
-            pic_Star2.Location = new Point(656, 567);
+            pic_Star2.Location = new Point(642, 549);
             pic_Star2.Name = "pic_Star2";
-            pic_Star2.Size = new Size(102, 87);
+            pic_Star2.Size = new Size(128, 105);
             pic_Star2.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star2.TabIndex = 2;
             pic_Star2.TabStop = false;
@@ -90,10 +86,9 @@
             // 
             // pic_Star3
             // 
-            pic_Star3.Image = Properties.Resources.star;
-            pic_Star3.Location = new Point(137, 118);
+            pic_Star3.Location = new Point(124, 118);
             pic_Star3.Name = "pic_Star3";
-            pic_Star3.Size = new Size(102, 87);
+            pic_Star3.Size = new Size(126, 108);
             pic_Star3.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star3.TabIndex = 3;
             pic_Star3.TabStop = false;
@@ -101,10 +96,9 @@
             // 
             // pic_Star4
             // 
-            pic_Star4.Image = Properties.Resources.star;
             pic_Star4.Location = new Point(137, 389);
             pic_Star4.Name = "pic_Star4";
-            pic_Star4.Size = new Size(102, 87);
+            pic_Star4.Size = new Size(131, 105);
             pic_Star4.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star4.TabIndex = 4;
             pic_Star4.TabStop = false;
@@ -112,39 +106,19 @@
             // 
             // pic_Star5
             // 
-            pic_Star5.Image = Properties.Resources.star;
-            pic_Star5.Location = new Point(335, 254);
+            pic_Star5.Location = new Point(295, 227);
             pic_Star5.Name = "pic_Star5";
-            pic_Star5.Size = new Size(102, 87);
+            pic_Star5.Size = new Size(128, 114);
             pic_Star5.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star5.TabIndex = 5;
             pic_Star5.TabStop = false;
             pic_Star5.Click += pic_Star5_Click;
             // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(17, 733);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(94, 29);
-            guna2Button1.TabIndex = 7;
-            guna2Button1.Text = "Back";
-            guna2Button1.Click += btn_Back_Click;
-            // 
             // pic_Star8
             // 
-            pic_Star8.Image = Properties.Resources.star;
-            pic_Star8.Location = new Point(665, 254);
+            pic_Star8.Location = new Point(642, 227);
             pic_Star8.Name = "pic_Star8";
-            pic_Star8.Size = new Size(102, 87);
+            pic_Star8.Size = new Size(128, 114);
             pic_Star8.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star8.TabIndex = 8;
             pic_Star8.TabStop = false;
@@ -152,10 +126,9 @@
             // 
             // pic_Star6
             // 
-            pic_Star6.Image = Properties.Resources.star;
-            pic_Star6.Location = new Point(489, 389);
+            pic_Star6.Location = new Point(489, 371);
             pic_Star6.Name = "pic_Star6";
-            pic_Star6.Size = new Size(102, 87);
+            pic_Star6.Size = new Size(130, 123);
             pic_Star6.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star6.TabIndex = 9;
             pic_Star6.TabStop = false;
@@ -163,10 +136,9 @@
             // 
             // pic_Star7
             // 
-            pic_Star7.Image = Properties.Resources.star;
-            pic_Star7.Location = new Point(489, 118);
+            pic_Star7.Location = new Point(477, 118);
             pic_Star7.Name = "pic_Star7";
-            pic_Star7.Size = new Size(102, 87);
+            pic_Star7.Size = new Size(127, 108);
             pic_Star7.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star7.TabIndex = 10;
             pic_Star7.TabStop = false;
@@ -174,10 +146,9 @@
             // 
             // pic_Star9
             // 
-            pic_Star9.Image = Properties.Resources.star;
-            pic_Star9.Location = new Point(811, 118);
+            pic_Star9.Location = new Point(822, 118);
             pic_Star9.Name = "pic_Star9";
-            pic_Star9.Size = new Size(102, 87);
+            pic_Star9.Size = new Size(127, 118);
             pic_Star9.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star9.TabIndex = 11;
             pic_Star9.TabStop = false;
@@ -185,25 +156,37 @@
             // 
             // pic_Star10
             // 
-            pic_Star10.Image = Properties.Resources.star;
-            pic_Star10.Location = new Point(811, 389);
+            pic_Star10.Location = new Point(811, 371);
             pic_Star10.Name = "pic_Star10";
-            pic_Star10.Size = new Size(102, 87);
+            pic_Star10.Size = new Size(127, 123);
             pic_Star10.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Star10.TabIndex = 12;
             pic_Star10.TabStop = false;
             pic_Star10.Click += pic_Star10_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.LightYellow;
+            button1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Purple;
+            button1.Location = new Point(20, 735);
+            button1.Name = "button1";
+            button1.Size = new Size(106, 35);
+            button1.TabIndex = 13;
+            button1.Text = "back";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += btn_Back_Click;
+            // 
             // CollectLevelControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(pic_Star10);
             Controls.Add(pic_Star9);
             Controls.Add(pic_Star7);
             Controls.Add(pic_Star6);
             Controls.Add(pic_Star8);
-            Controls.Add(guna2Button1);
             Controls.Add(pic_Star5);
             Controls.Add(pic_Star4);
             Controls.Add(pic_Star3);
@@ -234,11 +217,11 @@
         private PictureBox pic_Star3;
         private PictureBox pic_Star4;
         private PictureBox pic_Star5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private PictureBox pic_Star8;
         private PictureBox pic_Star6;
         private PictureBox pic_Star7;
         private PictureBox pic_Star9;
         private PictureBox pic_Star10;
+        private Button button1;
     }
 }

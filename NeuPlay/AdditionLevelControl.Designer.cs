@@ -233,7 +233,7 @@
             button4.TabIndex = 18;
             button4.Text = "back to Number land";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += back_Click;
+            button4.Click += btn_BackToNumber_Click;
             // 
             // AdditionLevelControl
             // 

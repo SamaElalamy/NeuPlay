@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace NeuPlay
 {
@@ -8,6 +9,7 @@ namespace NeuPlay
     {
         private Control draggedNumber = null; // بيحفظ الرقم اللي الطفل بيسحبه
         private Random random = new Random();
+        Score score = new Score();
 
         public OrderLevelControl()
         {
@@ -83,6 +85,9 @@ namespace NeuPlay
             if (iscorrect)
             {
                 MessageBox.Show("مبروك! رتبت الأرقام بامتياز 🏆", "أنت عبقري", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                score.AddPoints("StairsLevel"); //استدعاء داله الاسكور
+                MessageBox.Show("نقاطك: " + Score.points, "برافو🎉");
 
                 Form1 parentForm = (Form1)this.FindForm();
                 if (parentForm != null) parentForm.LoadScreen(new CompareLevelControl());

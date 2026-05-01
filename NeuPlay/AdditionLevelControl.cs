@@ -15,12 +15,13 @@ namespace NeuPlay
         private int num1, num2, correctAnswer;
         private Random random = new Random();
         TrackingSystem tracking; //عملنا object
+        Score score = new Score();
         private List<Button> optionButtons;
         public AdditionLevelControl()
         {
             InitializeComponent();
-            //اللعبه هتكون 7 جولات
-            tracking = new TrackingSystem(7, progressBar1);
+            //اللعبه هتكون 10 جولات
+            tracking = new TrackingSystem(10, progressBar1);
             GenerateQuestion();
             Theme.ApplyTheme(this);
         }
@@ -85,14 +86,24 @@ namespace NeuPlay
                 if (finished)
                 {
                     MessageBox.Show("عبقري رياضيات! خلصت ليفل الجمع 🏆", "ممتاز");
+
+                    score.AddPoints("AdditionLevel"); //استدعاء داله الاسكور
+                    MessageBox.Show("نقاطك: " + Score.points, "برافو🎉");
+
                     tracking.Reset(); //بنصغر العداد
+
+                    Form1 parentForm = (Form1)this.FindForm();
+                    if (parentForm != null)
+                    {
+                        parentForm.LoadScreen(new NumbersLand());
+                    }
                 }
                 else
                 {
                     MessageBox.Show("برافو! إجابة صحيحة 🌟", "ممتاز");
                     GenerateQuestion();
                 }
-
+               
             }
             else
             {
@@ -100,7 +111,7 @@ namespace NeuPlay
             }
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
+        private void btn_BackToNumber_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
@@ -113,7 +124,7 @@ namespace NeuPlay
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
-                parentForm.LoadScreen(new NumbersLand());
+                parentForm.LoadScreen(new CompareLevelControl());
         }
 
         private void progressBar1_Click(object sender, EventArgs e)

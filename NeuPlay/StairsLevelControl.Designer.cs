@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbl_Instruction = new Label();
             pic_Bunny = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label10 = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -57,13 +51,15 @@
             textBox9 = new TextBox();
             textBox10 = new TextBox();
             progressBar1 = new ProgressBar();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pic_Bunny).BeginInit();
             SuspendLayout();
             // 
             // lbl_Instruction
             // 
             lbl_Instruction.AutoSize = true;
-            lbl_Instruction.BackColor = Color.LightSteelBlue;
+            lbl_Instruction.BackColor = Color.LemonChiffon;
             lbl_Instruction.Font = new Font("Segoe UI", 18F);
             lbl_Instruction.ForeColor = Color.Navy;
             lbl_Instruction.Location = new Point(341, 17);
@@ -76,49 +72,13 @@
             // 
             pic_Bunny.BackgroundImageLayout = ImageLayout.Zoom;
             pic_Bunny.Image = Properties.Resources.stairs;
-            pic_Bunny.Location = new Point(159, 349);
+            pic_Bunny.Location = new Point(158, 346);
             pic_Bunny.Name = "pic_Bunny";
             pic_Bunny.Size = new Size(143, 130);
             pic_Bunny.SizeMode = PictureBoxSizeMode.Zoom;
             pic_Bunny.TabIndex = 7;
             pic_Bunny.TabStop = false;
             pic_Bunny.Click += pic_Bunny_Click;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(459, 582);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(94, 44);
-            guna2Button1.TabIndex = 10;
-            guna2Button1.Text = "Check";
-            guna2Button1.Click += btn_Check_Click;
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.BorderRadius = 15;
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(21, 17);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(94, 29);
-            guna2Button2.TabIndex = 11;
-            guna2Button2.Text = "Back";
-            guna2Button2.Click += btn_Back_Click;
             // 
             // label10
             // 
@@ -379,10 +339,36 @@
             progressBar1.TabIndex = 33;
             progressBar1.Click += progressBar1_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Purple;
+            button1.Location = new Point(462, 583);
+            button1.Name = "button1";
+            button1.Size = new Size(101, 45);
+            button1.TabIndex = 34;
+            button1.Text = "Check";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btn_Check_Click;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Purple;
+            button2.Location = new Point(17, 17);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 35;
+            button2.Text = "back";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += btn_Back_Click;
+            // 
             // StairsLevelControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(progressBar1);
             Controls.Add(textBox10);
             Controls.Add(textBox9);
@@ -404,8 +390,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label10);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
             Controls.Add(pic_Bunny);
             Controls.Add(lbl_Instruction);
             Name = "StairsLevelControl";
@@ -419,8 +403,6 @@
 
         private Label lbl_Instruction;
         private PictureBox pic_Bunny;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Label label10;
         private Label label1;
         private Label label2;
@@ -442,5 +424,7 @@
         private TextBox textBox9;
         private TextBox textBox10;
         private ProgressBar progressBar1;
+        private Button button1;
+        private Button button2;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace NeuPlay
 {
@@ -10,6 +11,7 @@ namespace NeuPlay
         int totalsteps = 10;
         TrackingSystem trackingSystem; // عملنا object     
         Random random = new Random();
+        Score score = new Score();
         private Point bunnyStartLocation;
         Label[] Labels;
         TextBox[] TextBoxes;
@@ -109,8 +111,12 @@ namespace NeuPlay
                 {
                     MessageBox.Show("مبروك! شريط التقدم اكتمل والأرنب فاز بالبطولة 🏆");
 
+                     score.AddPoints("CountLevel"); //استدعاء داله الاسكور
+                    MessageBox.Show("نقاطك: " + Score.points, "برافو🎉");
+
                     //بنصفر العداد 
                     trackingSystem.Reset();
+
                     Form1 parentForm = (Form1)this.FindForm();
                     if (parentForm != null) parentForm.LoadScreen(new OrderLevelControl());
                 }
@@ -142,7 +148,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new NumbersLand());
+                parentForm.LoadScreen(new CollectLevelControl());
             }
         }
 

@@ -10,6 +10,7 @@ namespace NeuPlay
         string correctAnswer;
         Random rnd = new Random();
         TrackingSystem tracker;
+        Score score = new Score();
 
         public CompareLevelControl()
         {
@@ -77,6 +78,10 @@ namespace NeuPlay
                 if (isFinished)
                 {
                     MessageBox.Show("بطل المقارنة! شريط التقدم اكتمل 🏆", "مبروك");
+
+                    score.AddPoints("CompareLevel"); //استدعاء داله الاسكور
+                    MessageBox.Show("نقاطك: " + Score.points, "برافو🎉");
+
                     tracker.Reset(); //بنصفر العداد
 
                     // كود الانتقال لليفل الترتيب
