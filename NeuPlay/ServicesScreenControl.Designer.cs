@@ -65,7 +65,7 @@
             // 
             // btn_HeroRest
             // 
-            btn_HeroRest.BackColor = Color.LavenderBlush;
+            btn_HeroRest.BackColor = Color.FromArgb(255, 227, 151);
             btn_HeroRest.BackgroundImage = (Image)resources.GetObject("btn_HeroRest.BackgroundImage");
             btn_HeroRest.BackgroundImageLayout = ImageLayout.Zoom;
             btn_HeroRest.FlatAppearance.BorderSize = 0;

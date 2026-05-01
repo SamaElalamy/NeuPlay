@@ -18,7 +18,7 @@ namespace NeuPlay
             {
                 HeroContentDisplay displayScreen = new HeroContentDisplay();
 
-                TipsContent myTips = new TipsContent(); // التغيير هنا بس!
+                TipsContent myTips = new TipsContent(); 
 
                 displayScreen.SetContent(myTips);
 

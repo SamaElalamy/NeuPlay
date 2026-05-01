@@ -59,7 +59,6 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NeuPlay";
-            TransparencyKey = Color.Black;
             Load += Form1_Load;
             ResumeLayout(false);
 

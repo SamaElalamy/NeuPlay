@@ -9,7 +9,7 @@ namespace NeuPlay
         public AchievementsControl()
         {
             InitializeComponent();
-            
+
             AddBadge("Numbers Hero 🏆", Color.Gold);
             AddBadge("Quick Solver ⚡", Color.SkyBlue);
             AddBadge("New Explorer 🌟", Color.LightGreen);
@@ -28,11 +28,12 @@ namespace NeuPlay
             lblBadge.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblBadge.Margin = new Padding(10);
 
-            
+
             flp_Achievements.Controls.Add(lblBadge);
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
+        
+        private void roundedButton1_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
