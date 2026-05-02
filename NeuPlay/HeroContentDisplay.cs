@@ -47,7 +47,6 @@ namespace NeuPlay
             }
             else
             {
-
                 MessageBox.Show("End of content");
                 Form1 p = (Form1)this.FindForm();
                 if (p != null) p.LoadScreen(new HeroRestControl());

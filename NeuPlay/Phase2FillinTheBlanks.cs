@@ -133,7 +133,7 @@ namespace NeuPlay
 
             if (gameManager.CheckAnswer(childAnswer))
             {
-
+                PopUpManager.ShowMessage(true);
                 UpdateScreen();
 
             }

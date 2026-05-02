@@ -13,7 +13,8 @@ namespace NeuPlay
         { 
             get; 
             private set; 
-        } = 0;
+        }
+        //read only
         public int CurrentIndex
         {
             get

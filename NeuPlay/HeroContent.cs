@@ -22,7 +22,6 @@ namespace NeuPlay
         public override void PrepareData()
         {
             Title = "Parental Tips";
-            ImagePaths.Clear();
             string path = Application.StartupPath + "\\HeroRestVisuals\\parental tips\\";
 
 
@@ -37,7 +36,6 @@ namespace NeuPlay
         public override void PrepareData()
         {
             Title = "My Tips";
-            ImagePaths.Clear();
             string path = Application.StartupPath + "\\HeroRestVisuals\\tips\\";
 
 
@@ -53,7 +51,6 @@ namespace NeuPlay
         public override void PrepareData()
         {
             Title = "Stories";
-            ImagePaths.Clear();
             string path = Application.StartupPath + "\\HeroRestVisuals\\stories\\";
 
             

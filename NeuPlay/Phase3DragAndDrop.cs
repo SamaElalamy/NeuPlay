@@ -173,7 +173,7 @@ namespace NeuPlay
                 {
                     PopUpManager.ShowMessage(true);
                     //A 3 seconds' delay to allow the child to see the original word
-                    await Task.Delay(3000);
+                    await Task.Delay(1000);
                     gameManager.CheckAnswer(currentWord.MissingLetter);
                     if(gameManager.CurrentIndex>=gameManager.NumberOfWord)
                     {

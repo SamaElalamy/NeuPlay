@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NumbersLand));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             btn_Start = new Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -36,9 +38,10 @@
             // 
             // label4
             // 
+            label4.BackColor = Color.FromArgb(106, 36, 138);
             label4.Dock = DockStyle.Top;
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(246, 202, 78);
+            label4.ForeColor = Color.FromArgb(249, 235, 249);
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
             label4.Size = new Size(1024, 120);
@@ -58,19 +61,21 @@
             btn_Start.TabIndex = 11;
             btn_Start.UseVisualStyleBackColor = true;
             btn_Start.Click += btn_Start_Click;
-          
             // 
             // guna2Button1
             // 
             guna2Button1.BorderRadius = 15;
+            guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(106, 36, 138);
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(12, 638);
             guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(123, 41);
             guna2Button1.TabIndex = 12;
             guna2Button1.Text = "Back";
