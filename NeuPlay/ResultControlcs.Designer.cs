@@ -64,11 +64,11 @@
             CreatingAccountbtn.BackColor = Color.FromArgb(155, 111, 255);
             CreatingAccountbtn.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CreatingAccountbtn.ForeColor = Color.FromArgb(249, 235, 249);
-            CreatingAccountbtn.Location = new Point(368, 360);
+            CreatingAccountbtn.Location = new Point(336, 360);
             CreatingAccountbtn.Name = "CreatingAccountbtn";
-            CreatingAccountbtn.Size = new Size(256, 61);
+            CreatingAccountbtn.Size = new Size(320, 61);
             CreatingAccountbtn.TabIndex = 5;
-            CreatingAccountbtn.Text = "create an account";
+            CreatingAccountbtn.Text = "Log in to your account";
             CreatingAccountbtn.UseVisualStyleBackColor = false;
             CreatingAccountbtn.Click += CreatingAccountbtn_Click;
             // 

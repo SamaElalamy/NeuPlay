@@ -5,18 +5,22 @@ namespace NeuPlay
 {
     public partial class DashboardControl : UserControl
     {
+        
+        private Users loggedInUser;
 
-        public DashboardControl(string childName, int currentScore)
+        
+        public DashboardControl(Users currentUser)
         {
             InitializeComponent();
-            lbl_Welcome.Text = "Hello, " + childName + " !";
-            lbl_Score.Text = currentScore.ToString();
-            lbl_Level.Text = "Level: 1";
-            lbl_Badge.Text = "Beginner";
-            lbl_Welcome.Text = "Hello, " + childName + "!";
+            loggedInUser = currentUser; 
+
+            
+            lbl_Welcome.Text = "Hello, " + loggedInUser.Name + "!";
+
+            
+            int currentScore = PopUpManager.TotalPoints;
             lbl_Score.Text = "Score: " + currentScore.ToString();
             lbl_Level.Text = "Level: 1";
-
 
             if (currentScore >= 50)
                 lbl_Badge.Text = "Numbers' Nerd 🌟";
@@ -24,13 +28,32 @@ namespace NeuPlay
                 lbl_Badge.Text = "New Explorer 🔍";
         }
 
+        
+        public DashboardControl()
+        {
+            InitializeComponent();
+            lbl_Welcome.Text = "Hello, Hero!";
+            lbl_Score.Text = "Score: 0";
+            lbl_Level.Text = "Level: 1";
+            lbl_Badge.Text = "New Explorer 🔍";
+        }
 
         private void btn_Play_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
+                parentForm.LoadScreen(new ServicesScreenControl());
+            }
+        }
 
+        
+        
+        private void btn_Play_Click_1(object sender, EventArgs e)
+        {
+            Form1 parentForm = (Form1)this.FindForm();
+            if (parentForm != null)
+            {
                 parentForm.LoadScreen(new ServicesScreenControl());
             }
         }
@@ -40,7 +63,6 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-
                 parentForm.LoadScreen(new AchievementsControl());
             }
         }
@@ -50,38 +72,17 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-
-                parentForm.LoadScreen(new ProfileControl());
-            }
-        }
-
-        public DashboardControl()
-        {
-            InitializeComponent();
-            lbl_Welcome.Text = "Hello, Hero !";
-            lbl_Score.Text = "Score: 0";
-            lbl_Level.Text = "Level: 1";
-            lbl_Badge.Text = "New Explorer";
-        }
-
-        private void btn_Play_Click_1(object sender, EventArgs e)
-        {
-            Form1 parentForm = (Form1)this.FindForm();
-            if (parentForm != null)
-            {
-
-                parentForm.LoadScreen(new ServicesScreenControl());
+                
+                parentForm.LoadScreen(new ProfileControl(loggedInUser));
             }
         }
 
         private void lbl_Welcome_Click(object sender, EventArgs e)
         {
-
         }
 
         private void lbl_Score_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

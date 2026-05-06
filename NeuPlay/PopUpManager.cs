@@ -34,23 +34,79 @@ namespace NeuPlay
             "It’s okay to make mistakes 💛",
             "You’re learning, and that’s what matters"
         };
-        public static void ShowMessage(bool isCorrect)
+
+        public static int TotalPoints = 0;
+        public static int CurrentStreak = 0; 
+        private static int mistakesBeforeCorrect = 0;
+        public static bool HasGreatComeback = false;
+        public static bool HasStreakMaster = false;
+
+        public static string GetCurrentBadge()
+        {
+            if (TotalPoints <= 100) return "The Little Explorer 🔍";
+            if (TotalPoints <= 300) return "Neu Spark 💡";
+            if (TotalPoints <= 600) return "Focus Hero 🎯";
+            if (TotalPoints <= 1000) return "Neu Thinker 🧠";
+            return "Neu Legend 👑"; // More than 1000
+        }
+
+        public static void ShowMessage(bool isCorrect, int pointsToEarn = 10)
         {
             string message;
             string title;
 
             if (isCorrect)
             {
-                message = correctMessages[random.Next(correctMessages.Length)];
+                
+                TotalPoints += pointsToEarn;
+                CurrentStreak++;
+
+                
+                message = correctMessages[random.Next(correctMessages.Length)] +
+                          "\n\n+" + pointsToEarn + " Points! ⭐\nTotal: " + TotalPoints + "\nBadge: " + GetCurrentBadge();
                 title = "Correct!";
+
+                
+                CheckSpecialRewards();
+                mistakesBeforeCorrect = 0;
             }
             else
-            { 
+            {
+                
+                CurrentStreak = 0; 
+                mistakesBeforeCorrect++; 
+
                 message = wrongMessages[random.Next(wrongMessages.Length)];
-                title = "Incorrect";
+                title = "Keep Trying!";
             }
 
-            MessageBox.Show(message,title);
+            MessageBox.Show(message, title, MessageBoxButtons.OK, isCorrect ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+        }
+        private static void CheckSpecialRewards()
+        {
+            
+            if (mistakesBeforeCorrect >= 2 && !HasGreatComeback)
+            {
+                HasGreatComeback = true;
+                MessageBox.Show("Awarded to a child who overcomes a big challenge!\n\nYou didn't give up... and that's your superpower! 💜",
+                                "🏅 The Great Comeback!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            
+            if (CurrentStreak == 3 && !HasStreakMaster)
+            {
+                HasStreakMaster = true;
+                MessageBox.Show("Awarded to a child who keeps learning consistently!\n\nConsistency is your strength! 💚",
+                                "⚡ Streak Master!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            
+        }
+        public static void ResetGameSession()
+        {
+            TotalPoints = 0;
+            CurrentStreak = 0;
+            mistakesBeforeCorrect = 0;
         }
     }
 }

@@ -1,4 +1,4 @@
-internal class Users
+public class Users
 {
     // Attributes
     public string Name { get; set; }

@@ -5,29 +5,38 @@ namespace NeuPlay
 {
     public partial class ProfileControl : UserControl
     {
-        public ProfileControl()
+
+        private Users loggedInUser;
+
+        
+        public ProfileControl(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser = currentUser; 
             LoadUserData();
             Theme.ApplyTheme(this);
         }
 
         private void LoadUserData()
         {
-            // بيانات افتراضية، تقدر تربطها بقاعدة البيانات لاحقاً
-            txt_Name.Text = "Sama";
-            txt_Age.Text = "5";
-            txt_Password.Text = "Sama123456"; // هيظهر كنجوم وغير قابل للتعديل
-        }
+            
+            if (loggedInUser != null)
+            {
+                
+                txt_Name.Text = loggedInUser.Name;
+                txt_Age.Text = loggedInUser.Age.ToString();
 
+                
+                txt_Password.Text = new string('*', loggedInUser.Password.Length);
+            }
+        }
 
         private void roundedButton1_Click(object sender, EventArgs e)
         {
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-
-                parentForm.LoadScreen(new DashboardControl());
+                parentForm.LoadScreen(new DashboardControl(loggedInUser));
             }
         }
     }

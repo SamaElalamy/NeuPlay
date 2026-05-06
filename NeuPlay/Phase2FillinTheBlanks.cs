@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace NeuPlay
 {
-    
+
     public partial class Phase2FillinTheBlanks : UserControl
     {
         private SpellQuestLevels gameManager = new SpellQuestLevels();
@@ -134,6 +134,7 @@ namespace NeuPlay
             if (gameManager.CheckAnswer(childAnswer))
             {
                 PopUpManager.ShowMessage(true);
+
                 UpdateScreen();
 
             }
@@ -156,6 +157,7 @@ namespace NeuPlay
         {
 
         }
+
     }
 }
 

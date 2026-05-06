@@ -4,7 +4,6 @@ namespace NeuPlay
 {
     internal class SpellQuestLevels
     {
-        //AI is used in helping to link Word_Item and LevelManager
         private WordItem[] currentLevelWords;
         private int currentWordIndex = 0;
 

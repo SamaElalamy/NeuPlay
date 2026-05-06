@@ -12,15 +12,31 @@ namespace NeuPlay
         }
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrWhiteSpace(Username.Text) || string.IsNullOrWhiteSpace(Password.Text))
             {
-                MessageBox.Show("Please,Enter the username and password", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter the username and password", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Form1 parentForm = (Form1)this.FindForm();
-            if (parentForm != null)
+
+            
+            DataManager manager = new DataManager();
+            Users currentUser = manager.LogIn(Username.Text, Password.Text);
+
+            
+            if (currentUser != null)
             {
-                parentForm.LoadScreen(new DashboardControl(Username.Text, 0));
+                Form1 parentForm = (Form1)this.FindForm();
+                if (parentForm != null)
+                {
+                    
+                    parentForm.LoadScreen(new DashboardControl(currentUser));
+                }
+            }
+            else
+            {
+                
+                MessageBox.Show("Wrong username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -29,6 +45,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
+                
                 parentForm.LoadScreen(new RegisterScreenControl());
             }
         }

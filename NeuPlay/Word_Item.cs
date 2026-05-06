@@ -37,7 +37,6 @@ namespace NeuPlay
             //reaching the path of the images using Path function
             ImagesPath = Application.StartupPath + "\\SpellQuestWords\\" + OriginalWord + ".png";
             //withdrawing a random letter out of the word
-            //AI is used to understand the technique of (Random)
             Random rand= new Random();
             int indexRandomness=rand.Next(0,OriginalWord.Length);
             //identifying the missed letter

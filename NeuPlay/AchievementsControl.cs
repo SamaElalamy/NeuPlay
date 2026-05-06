@@ -10,10 +10,19 @@ namespace NeuPlay
         {
             InitializeComponent();
 
-            AddBadge("Numbers Hero 🏆", Color.Gold);
-            AddBadge("Quick Solver ⚡", Color.SkyBlue);
-            AddBadge("New Explorer 🌟", Color.LightGreen);
+            string currentLevelBadge = PopUpManager.GetCurrentBadge();
+            AddBadge(currentLevelBadge, Color.Gold);
 
+            
+            if (PopUpManager.HasGreatComeback)
+            {
+                AddBadge("The Great Comeback 🏅", Color.MediumPurple);
+            }
+
+            if (PopUpManager.HasStreakMaster)
+            {
+                AddBadge("Streak Master ⚡", Color.LimeGreen);
+            }
             Theme.ApplyTheme(this);
         }
 
