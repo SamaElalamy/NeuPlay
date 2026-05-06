@@ -6,9 +6,11 @@ namespace NeuPlay
 {
     public partial class AchievementsControl : UserControl
     {
-        public AchievementsControl()
+        private Users loggedInUser;
+        public AchievementsControl(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser = currentUser;
 
             string currentLevelBadge = PopUpManager.GetCurrentBadge();
             AddBadge(currentLevelBadge, Color.Gold);
@@ -47,7 +49,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new DashboardControl());
+                parentForm.LoadScreen(new DashboardControl(loggedInUser));
             }
         }
     }

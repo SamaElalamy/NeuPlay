@@ -8,13 +8,15 @@ namespace NeuPlay
     public partial class Phase1FlashCardControl : UserControl
     {
         private WordItem[] levelWords;
+        private Users loggedInUser;
 
         //indicates the current word in the file
         private int currentIndex = 0;
 
-        public Phase1FlashCardControl()
+        public Phase1FlashCardControl(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser = currentUser;
         }
 
         private void Phase1FlashCardControl_Load(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace NeuPlay
                     Form1 parent = (Form1)this.FindForm();
                     if (parent != null)
                     {
-                        parent.LoadScreen(new Phase2FillinTheBlanks());
+                        parent.LoadScreen(new Phase2FillinTheBlanks(loggedInUser));
                     }
                 }
                 else

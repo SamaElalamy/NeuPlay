@@ -12,10 +12,17 @@ namespace NeuPlay
         public DashboardControl(Users currentUser)
         {
             InitializeComponent();
-            loggedInUser = currentUser; 
+            loggedInUser = currentUser;
+            if (loggedInUser != null)
+            {
+                lbl_Welcome.Text = "Hello, " + loggedInUser.Name + "!";
+            }
+            else
+            {
+                lbl_Welcome.Text = "Hello, Guest!"; 
+            }
 
             
-            lbl_Welcome.Text = "Hello, " + loggedInUser.Name + "!";
 
             
             int currentScore = PopUpManager.TotalPoints;
@@ -43,7 +50,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new ServicesScreenControl());
+                parentForm.LoadScreen(new ServicesScreenControl(loggedInUser));
             }
         }
 
@@ -54,7 +61,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new ServicesScreenControl());
+                parentForm.LoadScreen(new ServicesScreenControl(loggedInUser));
             }
         }
 
@@ -63,7 +70,7 @@ namespace NeuPlay
             Form1 parentForm = (Form1)this.FindForm();
             if (parentForm != null)
             {
-                parentForm.LoadScreen(new AchievementsControl());
+                parentForm.LoadScreen(new AchievementsControl(loggedInUser));
             }
         }
 

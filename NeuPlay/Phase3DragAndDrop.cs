@@ -13,10 +13,12 @@ namespace NeuPlay
         private WordItem currentWord;
         private Control[] dragButtons;
         private Label[] dropSlots;
+        private Users loggedInUser;
 
-        public Phase3DragAndDrop()
+        public Phase3DragAndDrop(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser = currentUser;
             this.Load += Phase3DragAndDrop_Load;
         }
 
@@ -180,7 +182,7 @@ namespace NeuPlay
                         Form1 parent = (Form1)this.FindForm();
                         if (parent != null)
                         {
-                            parent.LoadScreen(new Phase4Dictation());
+                            parent.LoadScreen(new Phase4Dictation(loggedInUser));
                         }
                         return;
                     }
@@ -205,7 +207,7 @@ namespace NeuPlay
             Form1 parent = (Form1)this.FindForm();
             if (parent != null)
             {
-                parent.LoadScreen(new Phase4Dictation());
+                parent.LoadScreen(new Phase4Dictation(loggedInUser));
             }
         }
 

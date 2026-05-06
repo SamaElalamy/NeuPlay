@@ -9,11 +9,14 @@ namespace NeuPlay
     public partial class Phase2FillinTheBlanks : UserControl
     {
         private SpellQuestLevels gameManager = new SpellQuestLevels();
+        private Users loggedInUser;
 
-        public Phase2FillinTheBlanks()
+        public Phase2FillinTheBlanks(Users currentUser)
         {
             InitializeComponent();
             this.Load += Phase2FillinTheBlanks_Load;
+            loggedInUser = currentUser;
+            this.loggedInUser = loggedInUser;
         }
 
         private void Phase2FillinTheBlanks_Load(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace NeuPlay
                 Form1 parent = (Form1)this.FindForm();
                 if (parent != null)
                 {
-                    parent.LoadScreen(new Phase3DragAndDrop());
+                    parent.LoadScreen(new Phase3DragAndDrop(loggedInUser));
                 }
                 return;
             }
@@ -149,7 +152,7 @@ namespace NeuPlay
             Form1 parent = (Form1)this.FindForm();
             if (parent != null)
             {
-                parent.LoadScreen(new Phase3DragAndDrop());
+                parent.LoadScreen(new Phase3DragAndDrop(loggedInUser));
             }
         }
 

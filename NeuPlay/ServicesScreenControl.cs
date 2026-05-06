@@ -5,9 +5,11 @@ namespace NeuPlay
 {
     public partial class ServicesScreenControl : UserControl
     {
-        public ServicesScreenControl()
+        private Users loggedInUser;
+        public ServicesScreenControl(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser = currentUser;
         }
         public ServicesScreenControl(string diagnosis)
         {
@@ -59,7 +61,7 @@ namespace NeuPlay
             if (parentForm != null)
             {
 
-                parentForm.LoadScreen(new SpellQuest());
+                parentForm.LoadScreen(new SpellQuest(loggedInUser));
             }
         }
 
@@ -69,7 +71,7 @@ namespace NeuPlay
             if (parentForm != null)
             {
 
-                parentForm.LoadScreen(new DashboardControl());
+                parentForm.LoadScreen(new DashboardControl(loggedInUser));
             }
         }
     }

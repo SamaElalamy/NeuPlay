@@ -9,9 +9,11 @@ namespace NeuPlay
     {
         private SpellQuestLevels gameManager = new SpellQuestLevels();
         private WordItem currentWord;
-        public Phase4Dictation()
+        private Users loggedInUser;
+        public Phase4Dictation(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser = currentUser;
             this.Load += Phase4Dictation_Load;
         }
 
@@ -84,7 +86,7 @@ namespace NeuPlay
                     if (parent != null)
                     {
                         
-                        parent.LoadScreen(new ServicesScreenControl());
+                        parent.LoadScreen(new ServicesScreenControl(loggedInUser));
                     }
                     return;
                 }

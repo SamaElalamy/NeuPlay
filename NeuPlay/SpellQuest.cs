@@ -5,9 +5,11 @@ namespace NeuPlay
 {
     public partial class SpellQuest : UserControl
     {
-        public SpellQuest()
+        private Users loggedInUser;
+        public SpellQuest(Users currentUser)
         {
             InitializeComponent();
+            loggedInUser=currentUser;  
             
         }
 
@@ -18,7 +20,7 @@ namespace NeuPlay
             if (parentForm != null)
             {
 
-                parentForm.LoadScreen(new Phase1FlashCardControl());
+                parentForm.LoadScreen(new Phase1FlashCardControl(loggedInUser));
             }
         }
 
@@ -29,7 +31,7 @@ namespace NeuPlay
             if (parentForm != null)
             {
 
-                parentForm.LoadScreen(new ServicesScreenControl());
+                parentForm.LoadScreen(new ServicesScreenControl(loggedInUser));
             }
         }
     }
