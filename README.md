@@ -53,7 +53,7 @@ NeuPlay was built with a strong focus on clean architecture and Object-Oriented 
 ---
 
 ## 🚀 How to Run Locally
-1. Clone the repository: `git clone [Your-Repo-Link-Here]`
+1. Clone the repository: `git clone [https://github.com/SamaElalamy/NeuPlay]`
 2. Open the `.sln` file in Visual Studio.
 3. Build the solution (`Ctrl + Shift + B`) to restore any dependencies.
 4. Press `F5` to run the application.
